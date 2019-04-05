@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.AskTeacherCheck" table="ask_teacher_check"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+
+		<!-- 1 -->
+		<many-to-one lazy="false" name="teacher"
+			class="com.hrbhd.bady.domain.Teacher" fetch="select">
+			<column name="teacher_id" length="32" />
+		</many-to-one>
+		<many-to-one lazy="false" name="ask"
+			class="com.hrbhd.bady.domain.Ask" fetch="select">
+			<column name="ask_id" length="32" />
+		</many-to-one>
+		<property name="checked" type="java.lang.String">
+			<column name="checked" length="32" />
+		</property>
+		<!-- 4 -->
+		<property name="ask_id" type="java.lang.String" insert="false" update="false">
+			<column name="ask_id" length="32" />
+		</property>
+		<property name="check_time" type="java.lang.String">
+			<column name="check_time" length="32" />
+		</property>
+		<property name="teacher_id" type="java.lang.String" insert="false" update="false">
+			<column name="teacher_id" length="32" />
+		</property>
+	</class>
+</hibernate-mapping>

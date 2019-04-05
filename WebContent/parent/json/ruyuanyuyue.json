@@ -1,0 +1,25 @@
+{
+  "bespeakList":[
+    {
+      "addrss":"未填写",
+      "attendShoolTime":"2017-4-5",
+      "beaspkId":69,
+      "birthday":"2012-3-4",
+      "createTime":1492167223,
+      "demand":"没要求",
+      "gradeId":2,
+      "gradeName":"小班",
+      "parentName":"葛触犯（爸爸）",
+      "parentPhone":1844585290,
+      "schoolContact":{
+        "name":"唐国辉",
+        "phone":185655689925
+      }
+      ,
+      "sex":"男",
+      "status":1,
+      "statusLabel":"待审核",
+      "studentName":"个触犯"
+    }
+  ]
+}

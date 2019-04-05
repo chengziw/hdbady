@@ -1,0 +1,151 @@
+/*杩欐槸鐢ㄤ簬index寰梒ss*/
+
+header{
+    width: 100%;
+    background: #219CE2;
+    height: 110px;
+    overflow: hidden;
+    margin-bottom: -1px;
+
+}
+.shijianwenhou {
+
+    /*background: orange;*/
+    width:200px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.shijianwenhou span{
+    font-size: 26px;
+}
+.renyuanxinxi{
+
+    text-align: center;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+/*鎵�鏈夌殑瀛�*/
+header span{
+    color: white;
+    font-size: 18px;
+    /*font-weight: 500;*/
+    opacity: 0.7;
+}
+section{
+    width: 100%;
+}
+table{
+    width: 100%;
+
+}
+table td{
+    width: 33%;
+    height: 120px;
+    border: 1px solid #d3d3d3;
+
+}
+
+table tr:first-child{
+    background: #219CE2;
+
+}
+tr:first-child td{
+    border: 0;
+
+}
+td:first-child{
+    border-left: 0;
+}
+td:last-child{
+    border-right: 0;
+}
+.zuihou td{
+    border-bottom: 0;
+}
+
+td a{
+    width: 100%;
+    text-align: center;
+    height: 120px;
+    line-height: 120px;
+    vertical-align: middle;
+
+
+}
+td a div{
+
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+    /*background: red;*/
+    margin-top: -10px;
+}
+td a div img{
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+
+}
+td a div span{
+    display: block;
+    margin-top: -53px;
+    color: #606060;
+}
+
+footer{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    background: white;
+
+}
+footer>div{
+    width: 33%;
+    height: 60px;
+    display: inline-block;
+    border-top:1px solid #d3d3d3;
+    float: left;
+    border-left: 0;
+
+}
+
+footer a{
+    width: 100%;
+    display: block;
+    height: 100%;
+
+
+
+}
+footer a>div{
+    width: 50px;
+    height: 60px;
+
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+footer img{
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 6px;
+}
+footer span{
+    width: 45px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #606060;
+
+}
+footer .dianji{
+    color: #219BE2;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>我们的幼儿园</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="lib/jquery/jquery.js"></script>
+    <!--<link rel="stylesheet" href="css/index.css">-->
+    <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<button id="bangqian">bangqian</button>
+
+
+<script>
+    $("#bangqian").click(function () {
+        if(window.confirm('你确定要帮签到吗？')){
+//alert("确定");
+            console.log("wobangqianle");
+        }else{
+//alert("取消");
+            console.log("meiyou");
+        }
+
+    });
+
+
+</script>
+
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+<!--<script src="js/index.js"></script>-->
+
+</body>
+
+</html>

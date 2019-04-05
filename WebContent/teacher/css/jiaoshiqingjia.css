@@ -1,0 +1,173 @@
+.neirong{
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    height: 70px;
+    background: #219CE2 ;
+    vertical-align: middle;
+    line-height: 70px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99;
+
+
+}
+
+header span{
+    font-size: 24px;
+    color: #D3F0FC;
+    padding-left: 10px;
+    /*background: pink;*/
+    display: block;
+    height: 40px;
+}
+
+
+section{
+    margin-top: 70px;
+
+}
+
+
+
+.nav-tabs  li{
+    width: 50%;
+    text-align: center;
+
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #219CE2;
+    cursor: default;
+    background-color: #fff;
+    border: 3px solid #219CE2;
+    border-bottom-color: transparent;
+    font-size: 18px;
+    border-bottom: 0;
+    margin-top: -3px;
+}
+
+.xuanze{
+    width: 90%;
+    height: 73px;
+    border: 1px solid #5e5e5e;
+
+    border-radius: 5px;
+    margin: 20px auto;
+    padding-top:13px;
+   
+
+
+
+
+}
+
+/* .xuanze .radio-inline:nth-child(1){
+	
+	margin-left:9%;
+}
+.xuanze .radio-inline:nth-child(2){
+	
+	margin-left:9%;
+}
+.xuanze .radio-inline:nth-child(3){
+	margin-left:9%;
+	
+}
+.xuanze .radio-inline:nth-child(4){
+	margin-left:9%;
+	
+}
+.xuanze .radio-inline:nth-child(5){
+	margin-left:9%;
+	
+}
+.xuanze .radio-inline:nth-child(6){
+	margin-left:9%;
+	
+} */
+
+.xuanze .radio-inline{
+	margin-left:12%;
+	
+}
+
+/* .xuanze .radio-inline:first-child{
+    margin-top: 10px;
+    float: left;
+    margin-left: 20%;
+
+
+}
+.xuanze .radio-inline:last-child{
+    margin-top: 10px;
+    float: right;
+    margin-right: 20%;
+
+
+} */
+
+.radio-inline{
+	
+}
+.xuanze .radio-inline input{
+    width: 20px;
+    height: 17px;
+    font-size: 18px;
+    margin-top: 2px;
+}
+.shurukuang{
+    width: 90%;
+    margin: 0 auto;
+}
+.riqixuanze{
+    width: 100%;
+    /*height: 180px;*/
+    /*background: pink;*/
+    margin-top: 20px;
+    margin-left: 5%;
+
+}
+.riqixuanze input{
+    width: 90%;
+    height: 40px;
+    margin-top: 17px;
+    margin-bottom: 18px;
+}
+.riqixuanze div{
+    color: #219CE2;
+    font-size: 18px;
+}
+.tiqiao{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.ul-list{
+    margin-top: 20px;
+    /*background: pink;*/
+}
+.ul-list li{
+    border-bottom: 1px solid #5e5e5e;
+    padding:9px 9px;
+    margin-top: 10px;
+}
+.ul-list span{
+    font-size: 18px;
+    /*margin-right: 16%;*/
+    color: #219CE2;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+.yuanyin{
+
+    text-indent: 7%;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.riqihao{
+    font-size: 20px;
+}

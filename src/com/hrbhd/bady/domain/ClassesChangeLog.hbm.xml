@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.ClassesChangeLog" table="t_classes_change_log"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+		
+		<!-- 1 -->
+		<!-- <many-to-one lazy="false" name="classes"
+			class="com.hrbhd.bady.domain.Classes" fetch="select">
+			<column name="classes_id" length="32" />
+		</many-to-one> -->
+		<property name="class_name" type="java.lang.String">
+			<column name="class_name" length="32"/>
+		</property>
+		<property name="grade_name" type="java.lang.String">
+			<column name="grade_name" length="32"/>
+		</property>
+		<property name="class_type" type="java.lang.String">
+			<column name="class_type" length="32"/>
+		</property>
+		<property name="start_label" type="java.lang.String">
+			<column name="start_label" length="32"/>
+		</property>
+		<property name="type_label" type="java.lang.String">
+			<column name="type_label" length="32"/>
+		</property>
+		<property name="note" type="java.lang.String">
+			<column name="note" length="100"/>
+		</property>
+		
+		<!-- 2 -->
+		<property name="teacher_name" type="java.lang.String">
+			<column name="teacher_name" length="32"/>
+		</property>
+		<property name="create_time" type="java.lang.String">
+			<column name="create_time" length="32"/>
+		</property>
+		<property name="create_time_format" type="java.sql.Date" insert="false" update="false">
+			<column name="create_time" length="32"/>
+		</property>
+	
+	</class>
+</hibernate-mapping>

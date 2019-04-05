@@ -1,0 +1,335 @@
+{
+  "daylist":[
+
+
+    {
+      "day":1,
+      "morningStatus":0,
+      "morningStatusLabel":"正常",
+      "arriveTime":"8:49:50",
+      "afternoonStatus":1,
+      "afternoonStatusLabel":"休息",
+      "leaveTime":""
+    }
+    ,
+
+    {
+      "day":2,
+      "morningStatus":2,
+      "morningStatusLabel":"请假",
+      "arriveTime":"",
+      "afternoonStatus":3,
+      "afternoonStatusLabel":"却卡",
+      "leaveTime":""
+    }
+  ,
+
+    {
+      "day":3,
+      "morningStatus":4,
+      "morningStatusLabel":"迟到",
+      "arriveTime":"9:49:50",
+      "afternoonStatus":3,
+      "afternoonStatusLabel":"缺卡",
+      "leaveTime":""
+    },
+
+    {
+      "day":4,
+      "morningStatus":2,
+      "morningStatusLabel":"请假",
+      "arriveTime":"",
+      "afternoonStatus":3,
+      "afternoonStatusLabel":"缺卡",
+      "leaveTime":""
+    }
+  ,
+
+    {
+      "day":5,
+      "morningStatus":0,
+      "morningStatusLabel":"正常",
+      "arriveTime":"9:00:00",
+      "afternoonStatus":4,
+      "afternoonStatusLabel":"早退",
+      "leaveTime":"15.30,33"
+    }
+  ,
+
+    {
+      "day":6,
+      "morningStatus":2,
+      "morningStatusLabel":"休息",
+      "arriveTime":"9:49:50",
+      "afternoonStatus":3,
+      "afternoonStatusLabel":"迟到",
+      "leaveTime":"15.30,33"
+    }
+  ,
+
+    {
+      "day":7,
+      "morningStatus":0,
+      "morningStatusLabel":"休息",
+      "arriveTime":"9:49:50",
+      "afternoonStatus":1,
+      "afternoonStatusLabel":"迟到",
+      "leaveTime":"15.30,33"
+    }
+  ,
+
+    {
+      "day":8,
+      "morningStatus":2,
+      "morningStatusLabel":"请假",
+      "arriveTime":"",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"17.30,33"
+    }
+  ,
+
+    {
+      "day":9,
+      "morningStatus":2,
+      "morningStatusLabel":"请假",
+      "arriveTime":"",
+      "afternoonStatus":3,
+      "afternoonStatusLabel":"缺卡",
+      "leaveTime":""
+    }
+  ,
+
+    {
+      "day":10,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18.30,33"
+    }
+  ,
+
+    {
+      "day":11,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"11",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"11"
+    }
+  ,
+
+    {
+      "day":12,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"12",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"12"
+    }
+  ,
+
+    {
+      "day":13,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"13",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"13"
+    }
+  ,
+
+    {
+      "day":14,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"14",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"14"
+    }
+  ,
+
+    {
+      "day":15,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"15",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"15"
+    }
+  ,
+
+    {
+      "day":16,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"16",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"16"
+    }
+  ,
+
+    {
+      "day":17,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"17",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"17"
+    }
+  ,
+
+    {
+      "day":18,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"18",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18"
+    }
+  ,
+
+    {
+      "day":19,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"19",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"19"
+    }
+  ,
+
+    {
+      "day":20,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"20",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18.30,33"
+    }
+  ,
+
+    {
+      "day":21,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18.30,33"
+    }
+  ,
+
+    {
+      "day":22,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18.30,33"
+    }
+  ,
+
+    {
+      "day":23,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18.30,33"
+    }
+  ,
+
+    {
+      "day":24,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18.30,33"
+    }
+  ,
+
+    {
+      "day":25,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18.30,33"
+    }
+  ,
+
+    {
+      "day":26,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18.30,33"
+    }
+  ,
+
+    {
+      "day":27,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18.30,33"
+    }
+  ,
+
+    {
+      "day":28,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18.30,33"
+    }
+  ,
+
+    {
+      "day":29,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18.30,33"
+    }
+  ,
+
+    {
+      "day":30,
+      "morningStatus":1,
+      "morningStatusLabel":"休息",
+      "arriveTime":"",
+      "afternoonStatus":0,
+      "afternoonStatusLabel":"正常",
+      "leaveTime":"18.30,33"
+    }
+
+
+  ]
+}

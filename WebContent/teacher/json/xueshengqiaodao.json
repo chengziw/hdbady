@@ -1,0 +1,72 @@
+{
+
+    "nianjibanhao":{
+
+      "nianji":"小1班",
+      "banhao":"三1班"
+
+    },
+    "arrive": {
+      "finsheds": [
+      ],
+      "unfinsheds": [
+        {
+          "isVacated": "False",
+          "sexLabel": "男",
+          "studentId": 4,
+          "studentName": "陈小二"
+        },
+        {
+          "isVacated": "False",
+          "sexLabel": "男",
+          "studentId": 5,
+          "studentName": "龙小花"
+        }
+      ]
+    },
+    "leave": {
+      "finsheds": [
+        {
+          "isVacated": "False",
+          "sexLabel": "男1",
+          "studentId": 6,
+          "studentName": "龙小花1"
+        },
+        {
+          "isVacated": "False",
+          "sexLabel": "男21",
+          "studentId": 7,
+          "studentName": "龙小花21"
+        },
+        {
+          "isVacated": "False",
+          "sexLabel": "男321",
+          "studentId": 8,
+          "studentName": "龙小花321"
+        }
+      ],
+      "unfinsheds": [
+        {
+          "isVacated": "False",
+          "sexLabel": "男",
+          "studentId": 9,
+          "studentName": "陈小二"
+        },
+        {
+          "isVacated": "False",
+          "sexLabel": "男",
+          "studentId": 9,
+          "studentName": "陈小二"
+        },
+        {
+          "isVacated": "False",
+          "sexLabel": "男",
+          "studentId": 10,
+          "studentName": "龙小花"
+        }
+      ]
+    },
+    "ok": "True",
+    "serverTime": "1490058619"
+
+}

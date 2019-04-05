@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.StudentImageUrl" table="t_student_image_url"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+		<!-- 1 -->
+		<many-to-one lazy="false" name="student"
+			class="com.hrbhd.bady.domain.Student" fetch="select">
+			<column name="student_id" length="32" />
+		</many-to-one>
+		<property name="image_url" type="java.lang.String">
+			<column name="image_url" length="50" />
+		</property>
+	</class>
+</hibernate-mapping>

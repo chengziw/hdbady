@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.Classes" table="t_classes"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+		<!-- 1 -->
+		<property name="class_name" type="java.lang.String">
+			<column name="class_name" length="32" />
+		</property>
+		<property name="type_label" type="java.lang.String">
+			<column name="type_label" length="32" />
+		</property>
+		<!-- 2 -->
+		<property name="start_label" type="java.lang.String">
+			<column name="start_label" length="32" />
+		</property>
+		<property name="end_label" type="java.lang.String">
+			<column name="end_label" length="32"/>
+		</property>
+		<property name="next_upgrade_time" type="java.lang.String">
+			<column name="next_upgrade_time" length="32" />
+		</property>
+		<!-- 3 -->
+		<property name="status_label" type="java.lang.String">
+			<column name="status_label" length="32" />
+		</property>
+		<property name="create_time" type="java.lang.String">
+			<column name="create_time" length="32"/>
+		</property>
+		<!-- 4 -->
+		<property name="test" type="java.lang.String">
+			<column name="test" length="32" />
+		</property>
+		<property name="teacher_id" type="java.lang.String" insert="false" update="false">
+			<column name="teacher_id" length="32" />
+		</property>
+		<property name="studentNumber" type="java.lang.String">
+			<column name="studentNumber" length="32" />
+		</property>
+		
+     	<!-- <one-to-one class="com.hrbhd.bady.domain.Teacher" name="teacher"></one-to-one> -->
+     	<many-to-one class="com.hrbhd.bady.domain.Teacher" lazy="false" unique="true" name="teacher"  
+     	 	column="teacher_id" cascade="none">
+     	</many-to-one>
+     	 
+     	 
+		<!-- 5 -->
+		<property name="note" type="java.lang.String">
+			<column name="note" length="32" />
+		</property>
+		<property name="status" type="java.lang.String">
+			<column name="status" length="32" />
+		</property>
+		<set name="students" cascade="none" inverse="true">
+			<key>
+				<column name="class_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.Student" />
+		</set>
+		<!-- 6 -->
+		<many-to-one lazy="false" name="grade"
+			class="com.hrbhd.bady.domain.Grade" fetch="select">
+			<column name="grade_id" length="32" />
+		</many-to-one>
+		<many-to-one lazy="false" name="classType"
+			class="com.hrbhd.bady.domain.ClassType" fetch="select">
+			<column name="class_type_id" length="32" />
+		</many-to-one>
+		<set name="studentBespeaks" cascade="none" inverse="true">
+			<key>
+				<column name="class_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.StudentBespeak" />
+		</set>
+		<!-- 7 -->
+		<one-to-one class="com.hrbhd.bady.domain.CurriculaTable"  name="curriculaTable"></one-to-one>  
+		<set name="classesChangeLogs" cascade="none" inverse="true">
+			<key>
+				<column name="classes_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.ClassesChangeLog" />
+		</set>
+		<property name="grade_id" type="java.lang.String" insert="false" update="false">
+			<column name="grade_id" length="32" />
+		</property>
+		<!-- 8 -->
+		<set name="homeWorks" cascade="delete" inverse="true">
+			<key>
+				<column name="classes_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.HomeWork" />
+		</set>
+		<set name="cookBooks" cascade="delete" inverse="true">
+			<key>
+				<column name="classes_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.CookBook" />
+		</set>
+		<set name="studentChecks" lazy="false" cascade="delete" inverse="true">
+			<key>
+				<column name="classes_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.StudentCheck" />
+		</set>
+	</class>
+</hibernate-mapping>

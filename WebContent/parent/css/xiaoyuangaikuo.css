@@ -1,0 +1,30 @@
+.neirong{
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    height: 70px;
+    background: #219CE2;
+    vertical-align: middle;
+    line-height: 70px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99;
+
+
+}
+
+header span{
+    font-size: 24px;
+    color: #D3F0FC;
+    padding-left: 10px;
+    /*background: pink;*/
+    display: block;
+    height: 40px;
+}
+
+
+ /*ul 下面的li，li下面的第一个div，span学科←，span时间右*/
+section{
+    margin-top: 70px;
+}

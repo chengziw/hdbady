@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.StudentChangeLog" table="t_student_change_log"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+		<!-- 1 -->
+		<!-- <many-to-one lazy="false" name="student"
+			class="com.hrbhd.bady.domain.Student" fetch="select">
+			<column name="student_id" length="32" />
+		</many-to-one> -->
+		<property name="student_name" type="java.lang.String">
+			<column name="student_name" length="32"/>
+		</property>
+		<property name="sex_name" type="java.lang.String">
+			<column name="sex_name" length="32"/>
+		</property>
+		<property name="yearMonthDay" type="java.lang.String">
+			<column name="yearMonthDay" length="32"/>
+		</property>
+		<property name="grade_name" type="java.lang.String">
+			<column name="grade_name" length="32"/>
+		</property>
+		<property name="class_name" type="java.lang.String">
+			<column name="class_name" length="32"/>
+		</property>
+		
+		<property name="type_name" type="java.lang.String">
+			<column name="type_name" length="32"/>
+		</property>
+		<property name="change_date_name" type="java.lang.String">
+			<column name="change_date_name" length="32"/>
+		</property>
+		<property name="change_date_name_format" type="java.sql.Date" insert="false" update="false">
+			<column name="change_date_name" length="32"/>
+		</property>
+		
+		<!-- 2 -->
+		<property name="note" type="java.lang.String">
+			<column name="note" length="32"/>
+		</property>
+		<property name="teacher_name" type="java.lang.String">
+			<column name="teacher_name" length="32"/>
+		</property>
+		<property name="create_name" type="java.lang.String">
+			<column name="create_name" length="32"/>
+		</property>
+	</class>
+</hibernate-mapping>

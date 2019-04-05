@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.StudentBespeak" table="t_student_bespeak"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+		<property name="student_no" type="java.lang.String">
+			<column name="student_no" length="32" />
+		</property>
+		<property name="name" type="java.lang.String">
+			<column name="name" length="32" />
+		</property>
+		<property name="sex" type="java.lang.String">
+			<column name="sex" length="32" />
+		</property>
+		<property name="yearMonthDay" type="java.lang.String">
+			<column name="yearMonthDay" length="32" />
+		</property>
+		<property name="age" type="java.lang.String">
+			<column name="age" length="32" />
+		</property>
+		<property name="grade_id" type="java.lang.String" insert="false" update="false">
+			<column name="grade_id" length="32" />
+		</property>
+		<property name="class_id" type="java.lang.String" insert="false" update="false">
+			<column name="class_id" length="32" />
+		</property>
+		<property name="parent_name" type="java.lang.String">
+			<column name="parent_name" length="32" />
+		</property>
+		<property name="phone" type="java.lang.String">
+			<column name="phone" length="32" />
+		</property>
+		<property name="enter_date" type="java.lang.String">
+			<column name="enter_date" length="32" />
+		</property>
+		<property name="enter_date_format" type="java.sql.Date" insert="false" update="false">
+			<column name="enter_date" length="32" />
+		</property>
+		<property name="address" type="java.lang.String">
+			<column name="address" length="32" />
+		</property>
+		<property name="status_name" type="java.lang.String">
+			<column name="status_name" length="32" />
+		</property>
+		<property name="edit" type="java.lang.String">
+			<column name="edit" length="32" />
+		</property>
+		<property name="password" type="java.lang.String">
+			<column name="password" length="32" />
+		</property>
+
+		<!-- 复制新增资料 -->
+
+		<property name="bespeak_type_name" type="java.lang.String">
+			<column name="bespeak_type_name" length="32" />
+		</property>
+		<property name="teacher_name" type="java.lang.String">
+			<column name="teacher_name" length="32" />
+		</property>
+		<property name="create_time_name" type="java.lang.String">
+			<column name="create_time_name" length="32" />
+		</property>
+		<property name="attend_shool_time_name" type="java.lang.String">
+			<column name="attend_shool_time_name" length="32" />
+		</property>
+		<property name="desctext" type="java.lang.String">
+			<column name="desctext" length="32" />
+		</property>
+
+		<!-- 详细资料 -->
+
+		<!-- 1 -->
+		<property name="is_local" type="java.lang.String">
+			<column name="is_local" length="32" />
+		</property>
+		<property name="is_teacherson" type="java.lang.String">
+			<column name="is_teacherson" length="32" />
+		</property>
+		<property name="census_type" type="java.lang.String">
+			<column name="census_type" length="32" />
+		</property>
+
+		<!-- 2 -->
+		<property name="relationship" type="java.lang.String">
+			<column name="relationship" length="32" />
+		</property>
+		<property name="health_status" type="java.lang.String">
+			<column name="health_status" length="32" />
+		</property>
+		<property name="is_allergy" type="java.lang.String">
+			<column name="is_allergy" length="32" />
+		</property>
+
+		<!-- 3 -->
+		<property name="is_predisease" type="java.lang.String">
+			<column name="is_predisease" length="32" />
+		</property>
+		<property name="is_health_form" type="java.lang.String">
+			<column name="is_health_form" length="32" />
+		</property>
+		<property name="is_health_verify" type="java.lang.String">
+			<column name="is_health_verify" length="32" />
+		</property>
+
+		<!-- 4 -->
+		<property name="is_ccine" type="java.lang.String">
+			<column name="is_ccine" length="32" />
+		</property>
+		<property name="blood_type" type="java.lang.String">
+			<column name="blood_type" length="32" />
+		</property>
+		<property name="commom_disease" type="java.lang.String">
+			<column name="commom_disease" length="32" />
+		</property>
+
+		<!-- 5 -->
+		<property name="timetype_id" type="java.lang.String">
+			<column name="timetype_id" length="32" />
+		</property>
+		<property name="is_only_child" type="java.lang.String">
+			<column name="is_only_child" length="32" />
+		</property>
+		<property name="birthplace" type="java.lang.String">
+			<column name="birthplace" length="32" />
+		</property>
+
+		<!-- 6 -->
+		<property name="identity_card" type="java.lang.String">
+			<column name="identity_card" length="32" />
+		</property>
+		<property name="demand" type="java.lang.String">
+			<column name="demand" length="500" />
+		</property>
+		<property name="note" type="java.lang.String">
+			<column name="note" length="500" />
+		</property>
+
+		<!-- 7 -->
+		<property name="interest" type="java.lang.String">
+			<column name="interest" length="32" />
+		</property>
+		<property name="status_name_text" type="java.lang.String">
+			<column name="status_name_text" length="32" />
+		</property>
+		<set name="studentBespeakDesc" cascade="all" inverse="true">
+			<key>
+				<column name="bespeak_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.StudentBespeakDesc" />
+		</set>
+		<!-- 8 -->
+		<many-to-one lazy="false" name="grade" 
+			class="com.hrbhd.bady.domain.Grade" fetch="select">
+			<column name="grade_id" length="32" />
+		</many-to-one>
+		<many-to-one lazy="false" name="classes"
+			class="com.hrbhd.bady.domain.Classes" fetch="select">
+			<column name="class_id" length="32" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

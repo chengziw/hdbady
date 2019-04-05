@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.ClockConfig" table="t_clock_config"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+		<!-- 1 -->
+		<property name="month" type="java.lang.String">
+			<column name="month" length="32" />
+		</property>
+		<!-- <property name="month1" type="java.lang.String">
+			<column name="month1" length="32" />
+		</property>
+		<property name="month2" type="java.lang.String">
+			<column name="month2" length="32" />
+		</property>
+		<property name="month3" type="java.lang.String">
+			<column name="month3" length="32" />
+		</property>
+		<property name="month4" type="java.lang.String">
+			<column name="month4" length="32" />
+		</property>
+		<property name="month5" type="java.lang.String">
+			<column name="month5" length="32" />
+		</property>
+		<property name="month6" type="java.lang.String">
+			<column name="month6" length="32" />
+		</property>
+		<property name="month7" type="java.lang.String">
+			<column name="month7" length="32" />
+		</property>
+		<property name="month8" type="java.lang.String">
+			<column name="month8" length="32" />
+		</property>
+		<property name="month9" type="java.lang.String">
+			<column name="month9" length="32" />
+		</property>
+		<property name="month10" type="java.lang.String">
+			<column name="month10" length="32" />
+		</property>
+		<property name="month11" type="java.lang.String">
+			<column name="month11" length="32" />
+		</property>
+		<property name="month12" type="java.lang.String">
+			<column name="month12" length="32" />
+		</property> -->
+		
+		<property name="clock_day" type="java.lang.String">
+			<column name="clock_day" length="32" />
+		</property>
+		
+		<property name="clock_day1" type="java.lang.String">
+			<column name="clock_day1" length="32" />
+		</property>
+		<!-- 2 -->
+		<property name="clock_day2" type="java.lang.String">
+			<column name="clock_day2" length="32" />
+		</property>
+		<property name="clock_day3" type="java.lang.String">
+			<column name="clock_day3" length="32" />
+		</property>
+		<property name="clock_day4" type="java.lang.String">
+			<column name="clock_day4" length="32" />
+		</property>
+		<!-- 3 -->
+		<property name="clock_day5" type="java.lang.String">
+			<column name="clock_day5" length="32" />
+		</property>
+		<property name="clock_day6" type="java.lang.String">
+			<column name="clock_day6" length="32" />
+		</property>
+		<property name="clock_day7" type="java.lang.String">
+			<column name="clock_day7" length="32" />
+		</property>
+		<!-- 4 -->
+		<property name="student_arrive_time" type="java.lang.String">
+			<column name="student_arrive_time" length="32" />
+		</property>
+		<property name="student_leave_time" type="java.lang.String">
+			<column name="student_leave_time" length="32" />
+		</property>
+		<property name="student_clock_type" type="java.lang.String">
+			<column name="student_clock_type" length="32" />
+		</property>
+		<!-- 5 -->
+		<property name="teacher_arrive_time" type="java.lang.String">
+			<column name="teacher_arrive_time" length="32" />
+		</property>
+		<property name="teacher_leave_time" type="java.lang.String">
+			<column name="teacher_leave_time" length="32" />
+		</property>
+		<property name="teacher_clock_type" type="java.lang.String">
+			<column name="teacher_clock_type" length="32" />
+		</property>
+		<!-- 6 -->
+		<property name="is_send_sms" type="java.lang.String">
+			<column name="is_send_sms" length="32" />
+		</property>
+		<property name="is_send_wx" type="java.lang.String">
+			<column name="is_send_wx" length="32" />
+		</property>
+	</class>
+</hibernate-mapping>

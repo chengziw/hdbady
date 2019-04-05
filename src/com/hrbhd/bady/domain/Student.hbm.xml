@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.Student" table="t_student"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+		<property name="student_no" type="java.lang.String">
+			<column name="student_no" length="32" />
+		</property>
+		<property name="name" type="java.lang.String">
+			<column name="name" length="32" />
+		</property>
+		<property name="sex" type="java.lang.String">
+			<column name="sex" length="32" />
+		</property>
+		<property name="yearMonthDay" type="java.lang.String">
+			<column name="yearMonthDay" length="32" />
+		</property>
+		<property name="age" type="java.lang.String">
+			<column name="age" length="32"/>
+		</property>
+		
+		<many-to-one lazy="false" name="classes"
+			class="com.hrbhd.bady.domain.Classes" fetch="select">
+			<column name="class_id" length="32" />
+		</many-to-one>
+		<many-to-one lazy="false" name="grade"
+			class="com.hrbhd.bady.domain.Grade" fetch="select">
+			<column name="grade_id" length="32" />
+		</many-to-one>
+		<property name="class_id" type="java.lang.String" insert="false" update="false">
+			<column name="class_id" length="32" />
+		</property>
+		<property name="grade_id" type="java.lang.String" insert="false" update="false">
+			<column name="grade_id" length="32" />
+		</property>
+		<property name="password" type="java.lang.String">
+			<column name="password" length="32" />
+		</property>
+		<property name="parent_name" type="java.lang.String">
+			<column name="parent_name" length="32" />
+		</property>
+		<property name="phone" type="java.lang.String">
+			<column name="phone" length="32"/>
+		</property>
+		<property name="enter_date" type="java.lang.String">
+			<column name="enter_date" length="32" />
+		</property>
+		<property name="address" type="java.lang.String">
+			<column name="address" length="32" />
+		</property>
+		<property name="status_name" type="java.lang.String">
+			<column name="status_name" length="32"/>
+		</property>
+		<property name="edit" type="java.lang.String">
+			<column name="edit" length="32" />
+		</property>
+		
+		<property name="email" type="java.lang.String">
+			<column name="email" length="32" />
+		</property>
+		<property name="weixin" type="java.lang.String">
+			<column name="weixin" length="32"/>
+		</property>
+		<property name="qq" type="java.lang.String">
+			<column name="qq" length="32" />
+		</property>
+		
+		<!-- 详细资料 -->
+		
+		<!-- 1 -->
+		<property name="is_local" type="java.lang.String">
+			<column name="is_local" length="32"/>
+		</property>
+		<property name="is_teacherson" type="java.lang.String">
+			<column name="is_teacherson" length="32"/>
+		</property>
+		<property name="census_type" type="java.lang.String">
+			<column name="census_type" length="32"/>
+		</property>
+	
+		<!-- 2 -->
+		<property name="relationship" type="java.lang.String">
+			<column name="relationship" length="32"/>
+		</property>
+		<property name="health_status" type="java.lang.String">
+			<column name="health_status" length="32"/>
+		</property>
+		<property name="is_allergy" type="java.lang.String">
+			<column name="is_allergy" length="32"/>
+		</property>
+		
+		<!-- 3 -->
+		<property name="is_predisease" type="java.lang.String">
+			<column name="is_predisease" length="32"/>
+		</property>
+		<property name="is_health_form" type="java.lang.String">
+			<column name="is_health_form" length="32"/>
+		</property>
+		<property name="is_health_verify" type="java.lang.String">
+			<column name="is_health_verify" length="32"/>
+		</property>
+		
+		<!-- 4 -->
+		<property name="is_ccine" type="java.lang.String">
+			<column name="is_ccine" length="32"/>
+		</property>
+		<property name="blood_type" type="java.lang.String">
+			<column name="blood_type" length="32"/>
+		</property>
+		<property name="commom_disease" type="java.lang.String">
+			<column name="commom_disease" length="32"/>
+		</property>
+		
+		<!-- 5 -->
+		<property name="timetype_id" type="java.lang.String">
+			<column name="timetype_id" length="32"/>
+		</property>
+		<property name="is_only_child" type="java.lang.String">
+			<column name="is_only_child" length="32"/>
+		</property>
+		<property name="birthplace" type="java.lang.String">
+			<column name="birthplace" length="32"/>
+		</property>
+		
+		<!-- 6 -->
+		<property name="identity_card" type="java.lang.String">
+			<column name="identity_card" length="32"/>
+		</property>
+		<property name="demand" type="java.lang.String">
+			<column name="demand" length="500"/>
+		</property>
+		<property name="note" type="java.lang.String">
+			<column name="note" length="500"/>
+		</property>
+		
+		<!-- 7 -->
+		<property name="field1" type="java.lang.String">
+			<column name="field1" length="32"/>
+		</property>
+		<property name="field2" type="java.lang.String">
+			<column name="field2" length="32"/>
+		</property>
+		<property name="field3" type="java.lang.String">
+			<column name="field3" length="32"/>
+		</property>
+		
+		<!-- 8 -->
+		<property name="interest" type="java.lang.String">
+			<column name="interest" length="32"/>
+		</property>
+		<!-- <property name="enter_date_name" type="java.sql.Date">
+			<column name="enter_date_name" length="32" />
+		</property> -->
+		<property name="status_name_text" type="java.lang.String">
+			<column name="status_name_text" length="32"/>
+		</property>
+		
+		<!-- 9 -->
+		<property name="enter_date_time" insert="false" update="false" type="java.sql.Date">
+			<column name="enter_date" length="32" />
+		</property>
+		
+		<!-- <set name="notices" table="notice_student_check" catalog="hdbady" cascade="delete">
+            <key>
+                <column name="student_id" length="32" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.hrbhd.bady.domain.Notice">
+                <column name="notice_id" length="32" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="asks" table="ask_student_check" catalog="hdbady" cascade="delete">
+            <key>
+                <column name="student_id" length="32" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.hrbhd.bady.domain.Ask">
+                <column name="ask_id" length="32" not-null="true" />
+            </many-to-many>
+        </set> -->
+		<!-- 10 -->
+        <set name="studentVacations" cascade="delete" inverse="true">
+			<key>
+				<column name="student_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.StudentVacation" />
+		</set>
+		<set name="studentChecks" cascade="delete" inverse="true">
+			<key>
+				<column name="student_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.StudentCheck" />
+		</set>
+		<set name="studentMonthChecks" cascade="delete" inverse="true">
+			<key>
+				<column name="student_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.StudentMonthCheck" />
+		</set>
+		<!-- 11 -->
+		<set name="studentChangeLogs" cascade="delete" inverse="true">
+			<key>
+				<column name="student_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.StudentChangeLog" />
+		</set>	
+		<set name="askStudentChecks" cascade="delete" inverse="true">
+			<key>
+				<column name="student_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.AskStudentCheck" />
+		</set>		
+		<set name="studentImageUrls" cascade="delete" inverse="true">
+			<key>
+				<column name="student_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.StudentImageUrl" />
+		</set>
+
+	</class>
+</hibernate-mapping>

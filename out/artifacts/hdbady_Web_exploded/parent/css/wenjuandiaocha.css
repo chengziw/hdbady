@@ -1,0 +1,240 @@
+.neirong{
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    height: 70px;
+    background: #219CE2;
+    vertical-align: middle;
+    line-height: 70px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 9999;
+
+
+}
+
+header span{
+    font-size: 24px;
+    color: #D3F0FC;
+    padding-left: 10px;
+    /*background: pink;*/
+    display: block;
+    height: 40px;
+}
+
+
+
+
+section{
+    margin-top: 70px;
+}
+
+.ul-list li{
+    /*background: pink;*/
+    width: 100%;
+    height: 60px;
+    vertical-align: middle;
+    line-height: 60px;
+    border-bottom: 1px solid #aaaaaa;
+    position: relative;
+    color: #666;
+    background: #f2f2f2;
+    -webkit-transform: translateX(0px);
+
+}
+
+.ul-list li  span{
+    display: inline-block;
+
+}
+.ul-list li  span.title{
+    /*background: pink;*/
+    width: 60%;
+    /*background: pink;*/
+    overflow: hidden;
+    margin-left: 3%;
+    font-size: 17px;
+
+    /*文本禁止选择*/
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+
+}
+.ul-list li  span.shijian{
+    float: right;
+    overflow: hidden;
+    width: 24%;
+    height: 60px;
+}
+.ul-list li  span.glyphicon{
+
+    font-size: 25px;
+    float: right;
+    margin-right: 1%;
+    /*background: pink;*/
+    /*width: 10%;*/
+    height: 60px;
+    line-height: 60px;
+    color: #bbbfb3;
+    font-weight: 100;
+    margin-left: 1%;
+
+
+
+}
+.ul-list {
+    overflow: hidden
+}
+
+
+
+div.bb{
+    width: 100%;
+    height: 60px;
+    /*background: pink;*/
+}
+/*.title{*/
+    /*width: 100%;*/
+    /*height: 60px;*/
+    /*background: red;*/
+    /*display: inline-block;*/
+/*}*/
+div.btn {
+    position: absolute;
+    top: 0;
+    right: -80px;
+    text-align: center;
+    background: #ff5d3e;
+    color: #fff;
+    width: 80px;
+    height: 60px;
+    line-height: 40px;
+}
+
+
+
+/*//////////////////////////////////////////content*/
+
+.content-header{
+    width: 100%;
+    /*height: 90px;*/
+    /*background: pink;*/
+    text-align: center;
+}
+.content-title{
+    /*margin-left: 20%;*/
+    width: 80%;
+    /*height: 60px;*/
+    /*background: blue;*/
+    margin: 0 auto;
+    /*text-indent: 30%;*/
+    text-align: center;
+    /*padding-top: 17px;*/
+    font-size: 21px;
+}
+.content-shijian{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.renshuhang{
+    width: 100%;
+    height: 60px;
+    /*background: pink;*/
+    /*line-height: 60px;*/
+    vertical-align: middle;
+
+}
+.renshuhang .renshu{
+    float: left;
+    margin-left: 10px;
+    color: #006699;
+    font-size: 16px;
+    line-height: 60px;
+}
+
+.renshuhang .jieguo{
+    height: 30px;
+    float: right;
+    margin-right: 10px;
+    color: #006699;
+    border: 1px solid #006699;
+    /*background: pink;*/
+    margin-top: 15px;
+    padding-top: 3px;
+    width: 70px;
+    text-align: center;
+
+}
+
+.xuanxiang div{
+    width: 80%;
+    height: 50px;
+    /*background: pink;*/
+    margin-left: 20px;
+    padding-top: 13px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    line-height: 25px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+}
+
+
+
+.xuanxiang div input[type="checkbox"]{
+    width: 20px;
+    height:17px;
+    /*background: white;*/
+    /*padding: 10px;*/
+    /*margin: 3px 0 0;*/
+
+}
+
+.jiesu{
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+div.button{
+    /*text-align: center;*/
+    margin-top: 10px;
+    padding-bottom: 70px;
+    /*padding-left: 30px;*/
+    /*padding-right: 50px;*/
+
+}
+button.btn-primary{
+    width: 80%;
+    height: 50px;
+    /*background: pink;*/
+    margin-left: 20px;
+    padding-top: 13px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+
+}
+
+
+table{
+    width: 100%;
+    margin-top: 20px;
+
+}
+td{
+    width: 30%;
+    height: 50px;
+    /*background: pink;*/
+    margin-top: 10px;
+    margin-left: 10px;
+    border:1px solid #aaaaaa;
+    text-align: center;
+}

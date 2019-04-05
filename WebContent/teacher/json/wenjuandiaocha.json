@@ -1,0 +1,239 @@
+{
+
+    "askList": [
+      {
+        "answerItems": [
+          {
+            "answerId": "11",
+            "title": "今天",
+            "voterNumber": "1",
+            "voterTurnout": "0.20"
+          },
+          {
+            "answerId": 12,
+            "title": "明天",
+            "voterNumber": 3,
+            "voterTurnout": 0.6
+          },
+          {
+            "answerId": 13,
+            "title": "后天",
+            "voterNumber": "0",
+            "voterTurnout": 0
+          }
+        ],
+        "askId": 4,
+        "createTime": 1484657752,
+        "isAnonymous": 0,
+        "isShowResults": 1,
+        "isSinglesubmit": "True",
+        "isSubmited": "True",
+        "submitendDate": 1591383067177,
+        "submitNums": 5,
+        "submitStartDate": "1484657752",
+        "title": "那天放假"
+      }
+      ,
+      {
+        "answerItems":[
+          {
+            "answerId":8,
+            "title":"打雪仗1",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗2",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗3",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗4",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          }
+        ]
+        ,
+        "askId":3,
+        "createTime":1484551829,
+        "isAnonymous":0,
+        "isShowResults":1,
+        "isSinglesubmit":false,
+        "isSubmited":false,
+        "submitendDate":1484834888,
+        "submitNums":4,
+        "submitStartDate":14839992932,
+        "title":"2017年最想干的事情"
+      }
+      ,
+      {
+        "answerItems":[
+          {
+            "answerId":8,
+            "title":"打雪仗1",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗2",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗3",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗4",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          }
+        ]
+      ,
+        "askId":3,
+        "createTime":1484551829,
+        "isAnonymous":0,
+        "isShowResults":1,
+        "isSinglesubmit":false,
+        "isSubmited":false,
+        "submitendDate":1484834888,
+        "submitNums":4,
+        "submitStartDate":14839992932,
+        "title":"2017年最想干的事情"
+      }
+      ,   {
+        "answerItems":[
+          {
+            "answerId":8,
+            "title":"打雪仗1",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗2",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗3",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗4",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          }
+        ]
+      ,
+        "askId":3,
+        "createTime":1484551829,
+        "isAnonymous":0,
+        "isShowResults":1,
+        "isSinglesubmit":false,
+        "isSubmited":false,
+        "submitendDate":1484834888,
+        "submitNums":4,
+        "submitStartDate":14839992932,
+        "title":"2017年最想干的事情"
+      }
+      ,   {
+        "answerItems":[
+          {
+            "answerId":8,
+            "title":"打雪仗1",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗2",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗3",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗4",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          }
+        ]
+      ,
+        "askId":3,
+        "createTime":1484551829,
+        "isAnonymous":0,
+        "isShowResults":1,
+        "isSinglesubmit":false,
+        "isSubmited":false,
+        "submitendDate":1484834888,
+        "submitNums":4,
+        "submitStartDate":14839992932,
+        "title":"2017年最想干的事情"
+      }
+      ,   {
+        "answerItems":[
+          {
+            "answerId":8,
+            "title":"打雪仗1",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗2",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗3",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          },
+          {
+            "answerId":8,
+            "title":"打雪仗4",
+            "voterNumber":3,
+            "voterTurnout":0.75
+          }
+        ]
+      ,
+        "askId":3,
+        "createTime":1484551829,
+        "isAnonymous":0,
+        "isShowResults":1,
+        "isSinglesubmit":false,
+        "isSubmited":false,
+        "submitendDate":1484834888,
+        "submitNums":4,
+        "submitStartDate":14839992932,
+        "title":"2017年最想干的事情"
+      }
+    ],
+    "hasMore": true,
+    "nextPageNum": 0,
+    "ok": "True",
+    "serverTime": "1489469739"
+
+}

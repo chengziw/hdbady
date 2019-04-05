@@ -1,0 +1,107 @@
+.neirong{
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    height: 70px;
+    background: #219CE2;
+    vertical-align: middle;
+    line-height: 70px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99;
+
+
+}
+
+header span{
+    font-size: 24px;
+    color: #D3F0FC;
+    padding-left: 10px;
+    /*background: pink;*/
+    display: block;
+    height: 40px;
+}
+
+
+/*ul 下面的li，li下面的第一个div，span学科←，span时间右*/
+section{
+    margin-top: 70px;
+}
+
+
+.kinerNav{
+    overflow: hidden;
+}
+.kinerNav li{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #aaaaaa;
+    font-size: 18px;
+    padding-left: 5px;
+
+}
+.kinerNav li a{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    display: block;
+
+}
+.kinerNav li span.glyphicon{
+    float: right;
+    margin-right: 17px;
+    font-size: 28px;
+    float: right;
+    margin-right: 6px;
+    padding-top: 17px;
+    color: #928a8a;
+    height: 60px;
+
+}
+.biaoti{
+
+    display: inline-block;
+    overflow: hidden;
+    /*background: pink;*/
+    width: 20%;
+    height: 60px;
+    padding-left: 10px;
+
+
+
+
+}
+.kinerNav li span.shijian{
+
+    display: inline-block;
+    overflow: hidden;
+    /*background: pink;*/
+    width: 25%;
+    height: 60px;
+    /*float: right;*/
+    /*font-size: 13px;*/
+
+}
+.kinerNav li span.sex{
+
+    display: inline-block;
+    overflow: hidden;
+    /*background: pink;*/
+    width: 5%;
+    height: 60px;
+    /*float: right;*/
+    /*font-size: 13px;*/
+    margin-left: -6px;
+
+}
+
+
+
+
+.kinerNav li:first-child{
+    height: 0;
+    border-bottom: 0;
+}
+

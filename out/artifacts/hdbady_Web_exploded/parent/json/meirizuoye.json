@@ -1,0 +1,71 @@
+{
+  "hasMore": true,
+  "homeworklist": [
+    {
+      "audio_url": "url",
+      "classlist": {
+        "classid": 1,
+        "teachername": "唐光辉",
+        "gradeid": 1,
+        "gradname": "托班"
+      },
+      "content": "和触犯",
+      "create_time": "2017-3-30 12:25",
+      "duration": 0,
+      "homeworkid": 68,
+      "images": [
+        {"imgurl":"images/close.png"},
+        {"imgurl":"images/close.png"}
+      ],
+      "iscurrentterm": "true",
+      "status": 1,
+      "subjectid": 5,
+      "subjectname": "数学"
+    }
+  ,
+    {
+      "audio_url": "url",
+      "classlist": {
+        "classid": 1,
+        "teachername": "急急急",
+        "gradeid": 1,
+        "gradname": "托班"
+      },
+      "content": "和11触犯",
+      "create_time": 1490266900,
+      "duration": 0,
+      "homeworkid": 68,
+      "images": [
+        {"imgurl":"images/close.png"},
+        {"imgurl":"images/close.png"}
+      ],
+      "iscurrentterm": "true",
+      "status": 1,
+      "subjectid": 5,
+      "subjectname": "社会"
+    },
+    {
+      "audio_url": "url",
+      "classlist": {
+        "classid": 1,
+        "teachername": "这是老师名",
+        "gradeid": 1,
+        "gradname": "托班"
+      },
+      "content": "和11触犯和11触犯和11触犯和11触犯和11触犯和11触犯和11触犯和11触犯",
+      "create_time": 1490266900,
+      "duration": 0,
+      "homeworkid": 68,
+      "images": [
+        {"imgurl":"images/close.png"},
+        {"imgurl":"images/close.png"},
+        {"imgurl":"images/close.png"}
+      ],
+      "iscurrentterm": "true",
+      "status": 1,
+      "subjectid": 5,
+      "subjectname": "社会"
+    }
+  ],
+  "servertime":"1111111111"
+}

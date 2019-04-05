@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.objectFactory" value="spring" />
+	<package name="basicstruts2" extends="struts-default">
+
+		<interceptors>
+			<interceptor name="LoginInterceptor"
+				class="com.hrbhd.bady.web.interceptor.LoginInterceptor">
+				<param name="excludeMethods">teacherLogin</param>
+				<param name="excludeMethods">parentLogin</param>
+			</interceptor>
+
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="LoginInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="myStack" />
+
+		<global-results>
+			<result name="login">/login.jsp</result>
+			<result name="teacherLogin">/tlogin.jsp</result>
+			<result name="parentLogin">/plogin.jsp</result>
+		</global-results>
+
+		<action name="page_*_*">
+			<result name="success" type="dispatcher">/WEB-INF/page/{1}/{2}.jsp</result>
+		</action>
+
+		<action name="studentAction_*" class="com.hrbhd.bady.web.action.StudentAction"
+			method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="ParentLoginInterceptor"></interceptor-ref> -->
+			<result name="edit">/WEB-INF/page/student/student-edit.jsp</result>
+			<result name="about">/WEB-INF/page/student/student-about.jsp</result>
+			<result name="allot">/WEB-INF/page/student/student-allot.jsp</result>
+			<result name="enter">/WEB-INF/page/student/student-enter.jsp</result>
+			<result name="delete">/WEB-INF/page/student/student-delete.jsp</result>
+			<result name="regulate">/WEB-INF/page/student/student-regulate.jsp
+			</result>
+			<result name="toschool">/WEB-INF/page/student/student-toschool.jsp
+			</result>
+			<result name="retirement">/WEB-INF/page/student/student-retirement.jsp
+			</result>
+
+			<result name="success" type="stream">
+				<!-- 给stream的结果类型注入参数：Content-Type -->
+				<param name="contentType">application/octet-stream</param>
+				<!-- 告知客户浏览器以下载的方式打开 -->
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<!-- 使用OGNL表达式，来动态获取文件名 
+					 ${@java.net.URLEncoder@encode(filename,"UTF-8")} 把${}中间的内容当成一个OGNL表达式来看待
+				-->
+				<!-- <param name="contentDisposition">attachment;filename=${@java.net.URLEncoder@encode(filename,"UTF-8")}</param> -->
+				<!-- 注入字节输入流 :取值要写动作类中set方法的名称，首字母改成小写-->
+				<param name="inputName">fileInputStream</param>
+			</result>
+
+			<result name="p_login">/plogin.jsp
+			</result>
+			<result name="p_home" type="redirectAction">page_common_index-parent.action
+			</result>
+			<result name="p_news" >/WEB-INF/page/student/p-student-news.jsp
+			</result>
+			<result name="p_aboutWe">/WEB-INF/page/student/p-student-about-we.jsp
+			</result>
+			<result name="p_about">/WEB-INF/page/student/p-student-about.jsp
+			</result>
+			<result name="p_aboutt">/WEB-INF/page/student/p-student-aboutt.jsp
+			</result>
+			<result name="p_email">/WEB-INF/page/student/p-student-email.jsp
+			</result>
+			<result name="p_img">/WEB-INF/page/student/p-student-img.jsp</result>
+			<result name="p_logout">/plogin.jsp
+			</result>
+
+			<result name="p_mine">/WEB-INF/page/student/p-student-mine.jsp</result>
+			<result name="p_phone">/WEB-INF/page/student/p-student-phone.jsp
+			</result>
+			<result name="p_qq">/WEB-INF/page/student/p-student-qq.jsp</result>
+
+			<result name="p_question">/WEB-INF/page/student/p-student-question.jsp
+			</result>
+			<result name="p_setParent">/WEB-INF/page/student/p-student-set-parent.jsp
+			</result>
+			<result name="p_wechat">/WEB-INF/page/student/p-student-wechat.jsp
+			</result>
+			
+			<result name="t_studentPhoto">/WEB-INF/page/student/t-student-photo.jsp
+			</result>
+			<result name="t_studentPhotoPublish">/WEB-INF/page/student/t-student-photo-publish.jsp
+			</result>
+		</action>
+
+		<action name="studentChangeLogAction_*" class="com.hrbhd.bady.web.action.StudentChangeLogAction"
+			method="{1}">
+
+		</action>
+
+		<action name="studentBespeakAction_*" class="com.hrbhd.bady.web.action.StudentBespeakAction"
+			method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="ParentLoginInterceptor"></interceptor-ref> -->
+			<result name="edit">/WEB-INF/page/student/student-bespeak-edit.jsp
+			</result>
+			<result name="check">/WEB-INF/page/student/student-bespeak-check.jsp
+			</result>
+
+			<result name="p_add">/WEB-INF/page/student/p-student-bespeal-add.jsp
+			</result>
+		</action>
+
+		<action name="studentBespeakDescAction_*"
+			class="com.hrbhd.bady.web.action.StudentBespeakDescAction" method="{1}">
+		</action>
+
+		<action name="teacherAction_*" class="com.hrbhd.bady.web.action.TeacherAction"
+			method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="TeacherLoginInterceptor"></interceptor-ref> -->
+			<result name="login">/WEB-INF/page/common/login.jsp</result>
+			<result name="index">/index.jsp</result>
+			<result name="home" type="redirectAction">page_common_home.action</result>
+			<result name="edit">/WEB-INF/page/teacher/teacher-edit.jsp</result>
+			<result name="vacation">/WEB-INF/page/teacher/teacher-vacation.jsp
+			</result>
+			<result name="shift">/WEB-INF/page/teacher/teacher-shift.jsp</result>
+			<result name="retireOrLeave">/WEB-INF/page/teacher/teacher-retire-or-leave.jsp
+			</result>
+			<result name="power">/WEB-INF/page/teacher/teacher-power.jsp</result>
+			<result name="about">/WEB-INF/page/teacher/teacher-about.jsp</result>
+			<result name="resume">/WEB-INF/page/teacher/teacher-resume.jsp</result>
+			<result name="multiplex">/WEB-INF/page/teacher/teacher-multiplex.jsp
+			</result>
+			<!-- 手机端操作 -->
+			<result name="t_login">/tlogin.jsp
+			</result>
+			<result name="t_home" type="redirectAction">page_common_index-teacher.action
+			</result>
+			<result name="t_news" >/WEB-INF/page/teacher/t-teacher-news.jsp
+			</result>
+			<result name="t_phone">/WEB-INF/page/teacher/t-teacher-phone.jsp
+			</result>
+			<result name="t_aboutWe">/WEB-INF/page/teacher/t-teacher-about-we.jsp
+			</result>
+			<result name="t_about">/WEB-INF/page/teacher/t-teacher-about.jsp
+			</result>
+			<result name="t_email">/WEB-INF/page/teacher/t-teacher-email.jsp
+			</result>
+			<result name="t_img">/WEB-INF/page/teacher/t-teacher-img.jsp</result>
+			<result name="t_logout">/tlogin.jsp
+			</result>
+			<result name="t_mine">/WEB-INF/page/teacher/t-teacher-mine.jsp</result>
+			<result name="t_phone">/WEB-INF/page/teacher/t-teacher-phone.jsp
+			</result>
+			<result name="t_qq">/WEB-INF/page/teacher/t-teacher-qq.jsp</result>
+			<result name="t_question">/WEB-INF/page/teacher/t-teacher-question.jsp
+			</result>
+			<result name="t_wechat">/WEB-INF/page/teacher/t-teacher-wechat.jsp
+			</result>
+		</action>
+
+		<action name="teacherChangeLogAction_*" class="com.hrbhd.bady.web.action.TeacherChangeLogAction"
+			method="{1}">
+
+		</action>
+
+		<action name="classesAction_*" class="com.hrbhd.bady.web.action.ClassesAction"
+			method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="TeacherLoginInterceptor"></interceptor-ref> -->
+			<result name="edit">/WEB-INF/page/class/class-edit.jsp</result>
+			<result name="delete">/WEB-INF/page/class/class-delete.jsp</result>
+			<!-- 手机端操作 -->
+			<result name="t_classRing">/WEB-INF/page/class/t-class-ring.jsp</result>
+		</action>
+
+		<action name="classesChangeLogAction_*" class="com.hrbhd.bady.web.action.ClassesChangeLogAction"
+			method="{1}">
+
+		</action>
+
+		<action name="gradeAction_*" class="com.hrbhd.bady.web.action.GradeAction"
+			method="{1}">
+			<result name="edit">/WEB-INF/page/parameter/grade-edit.jsp</result>
+		</action>
+
+		<action name="classTypeAction_*" class="com.hrbhd.bady.web.action.ClassTypeAction"
+			method="{1}">
+			<result name="edit">/WEB-INF/page/parameter/class-type-edit.jsp
+			</result>
+			<result name="sort">/WEB-INF/page/parameter/class-type-sort.jsp
+			</result>
+		</action>
+
+		<action name="scheduleAction_*" class="com.hrbhd.bady.web.action.ScheduleAction"
+			method="{1}">
+			<result name="edit">/WEB-INF/page/parameter/schedule-template-edit.jsp
+			</result>
+		</action>
+
+		<action name="subjectAction_*" class="com.hrbhd.bady.web.action.SubjectAction"
+			method="{1}">
+			<result name="edit">/WEB-INF/page/parameter/subject-edit.jsp</result>
+			<result name="add">/WEB-INF/page/parameter/subject-add.jsp</result>
+		</action>
+
+		<action name="teacherDutyAction_*" class="com.hrbhd.bady.web.action.TeacherDutyAction"
+			method="{1}">
+			<result name="edit">/WEB-INF/page/parameter/teacher-duty-edit.jsp
+			</result>
+		</action>
+
+		<action name="structureAction_*" class="com.hrbhd.bady.web.action.StructureAction"
+			method="{1}">
+		</action>
+
+		<action name="clockConfigAction_*" class="com.hrbhd.bady.web.action.ClockConfigAction"
+			method="{1}">
+			<result name="edit">/WEB-INF/page/parameter/clock-config-edit.jsp
+			</result>
+		</action>
+
+		<action name="roleAction_*" class="com.hrbhd.bady.web.action.RoleAction"
+			method="{1}">
+			<result name="add">/WEB-INF/page/parameter/role-add.jsp</result>
+			<result name="delete">/WEB-INF/page/parameter/role-delete.jsp</result>
+			<result name="editName">/WEB-INF/page/parameter/role-edit-name.jsp
+			</result>
+			<result name="editPower">/WEB-INF/page/parameter/role-edit-power.jsp
+			</result>
+			<result name="editMember">/WEB-INF/page/parameter/role-edit-member.jsp
+			</result>
+		</action>
+
+		<action name="curriculaTableAction_*" class="com.hrbhd.bady.web.action.CurriculaTableAction"
+			method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="TeacherLoginInterceptor"></interceptor-ref> <interceptor-ref name="ParentLoginInterceptor"></interceptor-ref> -->
+			<result name="add">/WEB-INF/page/curricula/class-curricula-add.jsp
+			</result>
+			<result name="look">/WEB-INF/page/curricula/class-curricula-look.jsp
+			</result>
+			<result name="edit">/WEB-INF/page/curricula/class-curricula-edit.jsp
+			</result>
+			<!-- 手机端操作 -->
+			<result name="t_classCurricula">/WEB-INF/page/curricula/t-class-curricula.jsp
+			</result>
+			<result name="p_classCurricula">/WEB-INF/page/curricula/p-class-curricula.jsp
+			</result>
+		</action>
+
+		<action name="curriculaTableCountAction_*"
+			class="com.hrbhd.bady.web.action.CurriculaTableCountAction" method="{1}">
+			<result name="add">/WEB-INF/page/curricula/class-curricula-add.jsp
+			</result>
+			<result name="look">/WEB-INF/page/curricula/class-curricula-look.jsp
+			</result>
+			<result name="edit">/WEB-INF/page/curricula/class-curricula-edit.jsp
+			</result>
+		</action>
+
+
+		<action name="noticeAction_*" class="com.hrbhd.bady.web.action.NoticeAction"
+			method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="TeacherLoginInterceptor"></interceptor-ref> <interceptor-ref name="ParentLoginInterceptor"></interceptor-ref> -->
+			<result name="add">/WEB-INF/page/askandnotice/notice-add.jsp
+			</result>
+			<result name="about">/WEB-INF/page/askandnotice/notice-about.jsp
+			</result>
+			<result name="delete">/WEB-INF/page/askandnotice/notice-delete.jsp
+			</result>
+			<result name="edit">/WEB-INF/page/askandnotice/notice-edit.jsp
+			</result>
+			<result name="putOut">/WEB-INF/page/askandnotice/notice-put-out.jsp
+			</result>
+			<!-- 手机端操作 -->
+			<result name="t_notice">/WEB-INF/page/askandnotice/t-notice.jsp</result>
+			<result name="p_notice">/WEB-INF/page/askandnotice/p-notice.jsp</result>
+			<result name="p_news" >/WEB-INF/page/student/p-student-news.jsp
+			</result>
+		</action>
+
+		<action name="askAction_*" class="com.hrbhd.bady.web.action.AskAction"
+			method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="TeacherLoginInterceptor"></interceptor-ref> <interceptor-ref name="ParentLoginInterceptor"></interceptor-ref> -->
+			<result name="add">/WEB-INF/page/askandnotice/ask-add.jsp</result>
+			<result name="about">/WEB-INF/page/askandnotice/ask-about.jsp</result>
+
+			<result name="aboutAbout">/WEB-INF/page/askandnotice/ask-about-about.jsp
+			</result>
+			<result name="delete">/WEB-INF/page/askandnotice/ask-delete.jsp
+			</result>
+			<result name="edit">/WEB-INF/page/askandnotice/ask-edit.jsp</result>
+			<result name="putOut">/WEB-INF/page/askandnotice/ask-put-out.jsp
+			</result>
+			<!-- 手机端操作 -->
+			<result name="t_ask">/WEB-INF/page/askandnotice/t-ask.jsp</result>
+			<result name="p_ask">/WEB-INF/page/askandnotice/p-ask.jsp</result>
+			<result name="p_news" >/WEB-INF/page/student/p-student-news.jsp
+			</result>
+			<result name="t_news" >/WEB-INF/page/teacher/t-teacher-news.jsp
+			</result>
+		</action>
+
+		<action name="studentVacationAction_*" class="com.hrbhd.bady.web.action.StudentVacationAction"
+			method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="ParentLoginInterceptor"></interceptor-ref> -->
+			<result name="add">/WEB-INF/page/check/student-vacation-add.jsp
+			</result>
+			<result name="check">/WEB-INF/page/check/student-vacation-check.jsp
+			</result>
+
+			<result name="p_studentVacation">/WEB-INF/page/check/p-student-vacation.jsp
+			</result>
+			<result name="t_studentVacation">/WEB-INF/page/check/t-student-vacation.jsp
+			</result>
+			<result name="t_studentVacationCheck">/WEB-INF/page/check/t-student-vacation-check.jsp
+			</result>
+			<result name="p_news" >/WEB-INF/page/student/p-student-news.jsp
+			</result>
+		</action>
+
+		<action name="studentCheckAction_*" class="com.hrbhd.bady.web.action.StudentCheckAction"
+			method="{1}">
+			<result name="add">/WEB-INF/page/check/student-day-add.jsp</result>
+			<result name="check">/WEB-INF/page/check/student-day-check.jsp
+			</result>
+			<result name="note">/WEB-INF/page/check/student-day-note.jsp
+			</result>
+			<result name="batchCome">/WEB-INF/page/check/student-day-batch-come.jsp
+			</result>
+			<result name="batchGo">/WEB-INF/page/check/student-day-batch-go.jsp
+			</result>
+			
+			<result name="t_studentComeAndGo">/WEB-INF/page/check/t-student-day-come-go.jsp
+			</result>
+			<result name="p_news" >/WEB-INF/page/student/p-student-news.jsp
+			</result>
+			<result name="t_news" >/WEB-INF/page/teacher/t-teacher-news.jsp
+			</result>
+		</action>
+
+		<action name="studentMonthCheckAction_*"
+			class="com.hrbhd.bady.web.action.StudentMonthCheckAction" method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="ParentLoginInterceptor"></interceptor-ref> -->
+			<result name="about">/WEB-INF/page/check/student-month-about.jsp
+			</result>
+
+			<result name="p_studentMonthCheck">/WEB-INF/page/check/p-student-month.jsp</result>
+		</action>
+
+		<action name="teacherVacationAction_*" class="com.hrbhd.bady.web.action.TeacherVacationAction"
+			method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="TeacherLoginInterceptor"></interceptor-ref> -->
+			<result name="add">/WEB-INF/page/check/teacher-vacation-add.jsp
+			</result>
+			<result name="check">/WEB-INF/page/check/teacher-vacation-check.jsp
+			</result>
+			<result name="destroy">/WEB-INF/page/check/teacher-vacation-destroy.jsp
+			</result>
+			<!-- 手机端操作 -->
+			<result name="t_teacherVacation">/WEB-INF/page/check/t-teacher-vacation.jsp
+			</result>
+		</action>
+
+		<action name="teacherCheckAction_*" class="com.hrbhd.bady.web.action.TeacherCheckAction"
+			method="{1}">
+			<result name="add">/WEB-INF/page/check/teacher-day-add.jsp</result>
+			<result name="check">/WEB-INF/page/check/teacher-day-check.jsp
+			</result>
+			<result name="note">/WEB-INF/page/check/teacher-day-note.jsp
+			</result>
+		</action>
+
+		<action name="teacherMonthCheckAction_*"
+			class="com.hrbhd.bady.web.action.TeacherMonthCheckAction" method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="TeacherLoginInterceptor"></interceptor-ref> -->
+			<result name="about">/WEB-INF/page/check/teacher-month-about.jsp
+			</result>
+			<!-- 手机端操作 -->
+			<result name="t_teacherMonthCheck">/WEB-INF/page/check/t-teacher-month.jsp</result>
+		</action>
+
+		<action name="homeWorkAction_*" class="com.hrbhd.bady.web.action.HomeWorkAction"
+			method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="TeacherLoginInterceptor"></interceptor-ref> <interceptor-ref name="ParentLoginInterceptor"></interceptor-ref> -->
+			<result name="about">/WEB-INF/page/homework/homework-about.jsp
+			</result>
+			<!-- 手机端页面 -->
+			<result name="t_homeWork">/WEB-INF/page/homework/t-homework.jsp</result>
+			<result name="t_add">/WEB-INF/page/homework/t-homework-add.jsp
+			</result>
+
+			<result name="p_homeWork">/WEB-INF/page/homework/p-homework.jsp</result>
+			<!-- <interceptor-ref name="TeacherLoginInterceptor"> <param name="excludeMethods">method1,method2</param> 
+				<param name="includeMethods">tadd</param> </interceptor-ref> -->
+		</action>
+
+		<action name="cookBookAction_*" class="com.hrbhd.bady.web.action.CookBookAction"
+			method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="TeacherLoginInterceptor"></interceptor-ref> <interceptor-ref name="ParentLoginInterceptor"></interceptor-ref> -->
+			<result name="about">/WEB-INF/page/cookbook/cookbook-about.jsp
+			</result>
+			<!-- 手机端页面 -->
+			<result name="t_cookBook">/WEB-INF/page/cookbook/t-cookbook.jsp</result>
+			<result name="t_add">/WEB-INF/page/cookbook/t-cookbook-add.jsp
+			</result>
+
+			<result name="p_cookBook">/WEB-INF/page/cookbook/p-cookbook.jsp</result>
+		</action>
+
+		<action name="schoolAction_*" class="com.hrbhd.bady.web.action.SchoolAction"
+			method="{1}">
+			<!-- <interceptor-ref name="defaultStack"></interceptor-ref> <interceptor-ref 
+				name="ParentLoginInterceptor"></interceptor-ref> -->
+			<result name="edit">/WEB-INF/page/parameter/school-edit.jsp</result>
+
+			<result name="p_about">/WEB-INF/page/parameter/p-school-about.jsp</result>
+		</action>
+
+	</package>
+</struts>

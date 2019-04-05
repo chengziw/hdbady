@@ -1,0 +1,57 @@
+@Override
+	public void paddStudentCheck() throws IOException {
+
+		String currentTime = TimeUtil.getCurrentTime();
+		String substring = currentTime.substring(11, 16);
+		String[] split2 = substring.split(":");
+		int hour2 = Integer.parseInt(split2[0]);
+
+		Student student = (Student) ServletActionContext.getRequest().getSession().getAttribute("loginStudent");
+		String currentDay = TimeUtil.getCurrentDay();
+		StudentCheck studentCheck = studentCheckDao.findByStudentAndDay(student, currentDay);
+
+		// 1代表规定时间,2代表真实时间
+
+		String type = "";
+
+		if (hour2 < 12) {
+			if (!"2".equals(studentCheck.getStatus())) {
+				String json = "{\"type\":\"1\",\"info\": \"老师已经帮助签到\"}";
+			}
+
+			ServletActionContext.getRequest().getSession().setAttribute("cometype", "1");
+			// 设置手机端数据
+			studentCheck.setArrive_time(substring);
+			studentCheck.setArrive_status("正常");
+			type = "签到成功";
+			studentCheck.setMorningStatus("0");
+
+			studentCheck.setStatus("3");
+			studentCheck.setStatus_label("已到校");
+			studentCheck.setArrive_time(substring);
+			studentCheck.setArrive_checkname(student.getParent_name());
+		}
+
+		else if (hour2 > 12) {
+			if (!"4".equals(studentCheck.getStatus())) {
+				String json = "{\"type\":\"1\",\"info\": \"老师已经帮助退签\"}";
+			}
+
+			ServletActionContext.getRequest().getSession().setAttribute("cometype", "1");
+			studentCheck.setArrive_time(substring);
+			studentCheck.setArrive_status("正常");
+
+			type = "退签成功";
+			// 设置手机端数据
+			studentCheck.setMorningStatus("0");
+
+			studentCheck.setStatus("4");
+			studentCheck.setStatus_label("已离校");
+			studentCheck.setArrive_time(substring);
+			studentCheck.setArrive_checkname(student.getParent_name());
+		}
+
+		String json = "{\"type\":\"0\",\"info\": \"" + type + "\"}";
+		JsonUtil.writeJson(json);
+
+	}

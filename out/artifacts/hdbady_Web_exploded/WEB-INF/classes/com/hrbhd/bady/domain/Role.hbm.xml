@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.Role" table="t_role"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+
+		<!-- 1 -->
+		<property name="name" type="java.lang.String">
+			<column name="name" length="32" />
+		</property>
+		<property name="type_label" type="java.lang.String">
+			<column name="type_label" length="32" />
+		</property>
+		<property name="scope" type="java.lang.String">
+			<column name="scope" length="32" />
+		</property>
+
+		<!-- 2 -->
+		<property name="user_names" type="java.lang.String">
+			<column name="user_names" length="32" />
+		</property>
+		<property name="teacher_name" type="java.lang.String">
+			<column name="teacher_name" length="32" />
+		</property>
+		<property name="create_time" type="java.lang.String">
+			<column name="create_time" length="32" />
+		</property>
+		<!-- 3 -->
+		<property name="edit" type="java.lang.String">
+			<column name="edit" length="32" />
+		</property>
+		<property name="type" type="java.lang.String">
+			<column name="type" length="32" />
+		</property>
+		<set name="teachers" table="role_teacher" catalog="hdbady" cascade="all">
+            <key>
+                <column name="role_id" length="32" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.hrbhd.bady.domain.Teacher">
+                <column name="teacher_id" length="32" not-null="true" />
+            </many-to-many>
+        </set>
+        <!-- 4 -->
+        <set name="pages" table="role_page" catalog="hdbady" cascade="all">
+            <key>
+                <column name="role_id" length="32" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.hrbhd.bady.domain.Page">
+                <column name="page_id" length="32" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="elements" table="role_element" catalog="hdbady" cascade="all">
+            <key>
+                <column name="role_id" length="32" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.hrbhd.bady.domain.Element">
+                <column name="element_id" length="32" not-null="true" />
+            </many-to-many>
+        </set>
+        <property name="note" type="java.lang.String">
+			<column name="note" length="32" />
+		</property>
+	</class>
+</hibernate-mapping>

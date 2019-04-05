@@ -1,0 +1,96 @@
+{
+  "shijia":[
+    {
+      "sexLabel": "男",
+      "studentId": 14013,
+      "studentName": "龙小花",
+      "starttime":"4-23",
+      "endtime":"4-26"
+    },
+    {
+      "sexLabel": "男",
+      "studentId": 1,
+      "studentName": "龙小花",
+      "starttime":"4-23",
+      "endtime":"4-23"
+    },
+    {
+      "sexLabel": "男",
+      "studentId": 12345,
+      "studentName": "龙龙龙",
+      "starttime":"14-26",
+      "endtime":"14-23"
+    },
+    {
+      "sexLabel": "男",
+      "studentId": 1,
+      "studentName": "式龙小花",
+      "starttime":"14-23",
+      "endtime":"14-23"
+    }
+
+  ],
+  "bingjia":[
+    {
+      "sexLabel": "男",
+      "studentId": 1,
+      "studentName": "龙小花",
+      "starttime":"14-23",
+      "endtime":"4-23"
+    },
+    {
+      "sexLabel": "男",
+      "studentId": 1,
+      "studentName": "龙小花1",
+      "starttime":"4-23",
+      "endtime":"4-23"
+    }
+  ],
+  "yiyueshijia":[
+    {
+      "sexLabel": "男",
+      "studentId": 14013,
+      "studentName": "龙小花",
+      "starttime":"4-23",
+      "endtime":"4-26"
+    },
+    {
+      "sexLabel": "男",
+      "studentId": 1,
+      "studentName": "龙小花",
+      "starttime":"4-23",
+      "endtime":"4-23"
+    },
+    {
+      "sexLabel": "男",
+      "studentId": 12345,
+      "studentName": "龙龙龙",
+      "starttime":"14-26",
+      "endtime":"14-23"
+    },
+    {
+      "sexLabel": "男",
+      "studentId": 1,
+      "studentName": "式龙小花",
+      "starttime":"14-23",
+      "endtime":"14-23"
+    }
+
+  ],
+  "yiyuebingjia":[
+    {
+      "sexLabel": "男",
+      "studentId": 1,
+      "studentName": "龙小花",
+      "starttime":"14-23",
+      "endtime":"4-23"
+    },
+    {
+      "sexLabel": "男",
+      "studentId": 1,
+      "studentName": "龙小花1",
+      "starttime":"4-23",
+      "endtime":"4-23"
+    }
+  ]
+}

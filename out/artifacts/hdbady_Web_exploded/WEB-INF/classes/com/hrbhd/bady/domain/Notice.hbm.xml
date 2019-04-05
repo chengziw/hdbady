@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.Notice" table="t_notice"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+
+		<!-- 1 -->
+		<property name="title" type="java.lang.String">
+			<column name="title" length="32" />
+		</property>
+		<property name="push_range" type="java.lang.String">
+			<column name="push_range" length="1000" />
+		</property>
+		<property name="push_object" type="java.lang.String">
+			<column name="push_object" length="32" />
+		</property>
+
+		<!-- 2 -->
+		<property name="create_teacher_name" type="java.lang.String">
+			<column name="create_teacher_name" length="32" />
+		</property>
+		<property name="create_time_name" type="java.lang.String">
+			<column name="create_time_name" length="32" />
+		</property>
+		<property name="check_teacher_name" type="java.lang.String">
+			<column name="check_teacher_name" length="32" />
+		</property>
+		<!-- 3 -->
+		<property name="check_time_name" type="java.lang.String">
+			<column name="check_time_name" length="32" />
+		</property>
+		<property name="edit" type="java.lang.String">
+			<column name="edit" length="32" />
+		</property>
+		<property name="is_delete" type="java.lang.String">
+			<column name="is_delete" length="32" />
+		</property>
+		<!-- 4 -->
+		<property name="check_teacher_id" type="java.lang.String">
+			<column name="check_teacher_id" length="32" />
+		</property>
+		<property name="descs" type="java.lang.String">
+			<column name="descs" length="32" />
+		</property>
+        <property name="notice_type" type="java.lang.String">
+			<column name="notice_type" length="32" />
+		</property>
+		<!-- 5 -->
+		<property name="is_check" type="java.lang.String">
+			<column name="is_check" length="32" />
+		</property>
+		<set name="noticeTeacherChecks" cascade="delete" inverse="true">
+			<key>
+				<column name="notice_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.NoticeTeacherCheck" />
+		</set>
+		<set name="noticeStudentChecks" cascade="delete" inverse="true">
+			<key>
+				<column name="notice_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.NoticeStudentCheck" />
+		</set>	
+		<!-- <set name="teachers" table="notice_teacher" catalog="hdbady" cascade="none">
+            <key>
+                <column name="notice_id" length="32" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.hrbhd.bady.domain.Teacher">
+                <column name="teacher_id" length="32" not-null="true" />
+            </many-to-many>
+        </set> -->
+        <!-- <set name="students" table="notice_student" catalog="hdbady" cascade="none">
+            <key>
+                <column name="notice_id" length="32" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.hrbhd.bady.domain.Student">
+                <column name="student_id" length="32" not-null="true" />
+            </many-to-many>
+        </set> -->	
+        <property name="check_time_name_format" type="java.sql.Date" insert="false" update="false">
+			<column name="check_time_name" length="32" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+*{padding:0;margin:0;}
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: #219CE2;
+    line-height: 70px;
+}
+.header span {
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    color: #D3F0FC;
+    margin-left: 15px;
+}
+.pic {
+    text-align: center;
+    margin: 10px 0;
+}
+.pic img {
+    width: 120px;
+    height: 120px;
+}
+.footer {
+    text-align: center;
+}
+.footer button {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    color: #000;
+    background-color: #ffffff;
+}

@@ -1,0 +1,27 @@
+{
+  "ok":true,
+  "servertime":1490661696,
+  "cookbookList":[
+    {
+      "subjectid":5,
+      "typeName":"早餐",
+      "classlist": {
+        "classid": 1,
+        "classname": "一班",
+        "gradeid":1,
+        "gradename":"托班"
+      }
+    },
+    {
+      "subjectid":6,
+      "typeName":"中餐",
+      "classlist": {
+        "classid": 24,
+        "classname": "三班",
+        "gradeid":3,
+        "gradename":"中班"
+      }
+    }
+
+  ]
+}

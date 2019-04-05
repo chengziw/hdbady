@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    border: 0;
+}
+.toubu{
+    height:80px;
+    background-color: #219CE2;
+}
+.yinying{
+    height: 17px;
+    background-color:#dddddd;
+}
+.header1{
+    height: 127px;
+}
+.changjianwenti{
+    height:60px;
+    border-bottom: 1px solid grey;
+}
+.guanyuwomen{
+    height:60px;
+    border-bottom: 1px solid grey;
+}
+/*.tel {*/
+/*text-align: center;*/
+/*padding-top: 60px;*/
+/*}*/
+/*.tel input {*/
+/*display: block;*/
+/*width: 900px;*/
+/*height: 80px;*/
+/*font-size: 30px;*/
+/*margin: 0 auto;*/
+/*text-indent: 1em;*/
+/*}*/
+/*.tel button {*/
+/*font-size: 50px;*/
+/*width: 800px;*/
+/*margin:50px 0;*/
+/*height: 100px;*/
+/*color: #fff;*/
+/*background-color: #219CE2;*/
+
+/*}*/
+.guanxi{
+    margin-top: 40px;
+    height: 60px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+.box1{
+    width: 0px;
+    height: 0px;
+    border: 10px solid white;
+    /*border-top: 1 none;*/
+    border-top-color: grey;
+}

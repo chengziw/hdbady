@@ -1,0 +1,36 @@
+{
+  "ok":true,
+  "servertime":1490661696,
+  "subjectlist":[
+    {
+      "subjectid":5,
+      "subjectname":"社会",
+      "classlist": {
+        "classid": 1,
+        "classname": "一班",
+        "gradeid":1,
+        "gradename":"托班"
+      }
+    },
+    {
+      "subjectid":6,
+      "subjectname":"科学",
+      "classlist": {
+        "classid": 24,
+        "classname": "三班",
+        "gradeid":3,
+        "gradename":"中班"
+      }
+    },
+    {
+      "subjectid":2,
+      "subjectname":"计算",
+      "classlist": {
+        "classid": 18,
+        "classname": "二班",
+        "gradeid":1,
+        "gradename":"小班"
+      }
+    }
+  ]
+}

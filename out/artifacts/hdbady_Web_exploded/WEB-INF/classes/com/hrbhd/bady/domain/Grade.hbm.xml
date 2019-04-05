@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.Grade" table="t_grade"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+
+		<!-- 1 -->
+		<property name="name" type="java.lang.String">
+			<column name="name" length="32" />
+		</property>
+		<property name="sort_name" type="java.lang.String">
+			<column name="sort_name" length="32" />
+		</property>
+		<property name="statusLabel" type="java.lang.String">
+			<column name="statusLabel" length="32" />
+		</property>
+
+		<!-- 2 -->
+		<property name="test" type="java.lang.String">
+			<column name="test" length="32" />
+		</property>
+		<property name="status" type="java.lang.String">
+			<column name="status" length="32" />
+		</property>
+		<property name="is_use_sort" type="java.lang.String">
+			<column name="is_use_sort" length="32" />
+		</property>
+		<!-- 3 -->
+		<property name="is_end_grade" type="java.lang.String">
+			<column name="is_end_grade" length="32" />
+		</property>
+		<set name="classes" cascade="none" inverse="true">
+			<key>
+				<column name="grade_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.Classes" />
+		</set>
+		<set name="subjects" table="grade_subject" catalog="hdbady" cascade="all">
+            <key>
+                <column name="grade_id" length="32" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.hrbhd.bady.domain.Subject">
+                <column name="subject_id" length="32" not-null="true" />
+            </many-to-many>
+        </set>
+	</class>
+</hibernate-mapping>

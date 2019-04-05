@@ -1,0 +1,287 @@
+.icon-blank{
+	background:url('icons/blank.gif') no-repeat center center;
+}
+.icon-add{
+	background:url('icons/edit_add.png') no-repeat center center;
+}
+.icon-edit{
+	background:url('icons/pencil.png') no-repeat center center;
+}
+.icon-clear{
+	background:url('icons/clear.png') no-repeat center center;
+}
+.icon-remove{
+	background:url('icons/edit_remove.png') no-repeat center center;
+}
+.icon-save{
+	background:url('icons/filesave.png') no-repeat center center;
+}
+.icon-cut{
+	background:url('icons/cut.png') no-repeat center center;
+}
+.icon-ok{
+	background:url('icons/ok.png') no-repeat center center;
+}
+.icon-no{
+	background:url('icons/no.png') no-repeat center center;
+}
+.icon-cancel{
+	background:url('icons/cancel.png') no-repeat center center;
+}
+.icon-reload{
+	background:url('icons/reload.png') no-repeat center center;
+}
+.icon-search{
+	background:url('icons/search.png') no-repeat center center;
+}
+.icon-print{
+	background:url('icons/print.png') no-repeat center center;
+}
+.icon-help{
+	background:url('icons/help.png') no-repeat center center;
+}
+.icon-undo{
+	background:url('icons/undo.png') no-repeat center center;
+}
+.icon-redo{
+	background:url('icons/redo.png') no-repeat center center;
+}
+.icon-back{
+	background:url('icons/back.png') no-repeat center center;
+}
+.icon-sum{
+	background:url('icons/sum.png') no-repeat center center;
+}
+.icon-tip{
+	background:url('icons/tip.png') no-repeat center center;
+}
+.icon-filter{
+	background:url('icons/filter.png') no-repeat center center;
+}
+.icon-man{
+	background:url('icons/man.png') no-repeat center center;
+}
+.icon-lock{
+	background:url('icons/lock.png') no-repeat center center;
+}
+.icon-more{
+	background:url('icons/more.png') no-repeat center center;
+}
+
+
+.icon-mini-add{
+	background:url('icons/mini_add.png') no-repeat center center;
+}
+.icon-mini-edit{
+	background:url('icons/mini_edit.png') no-repeat center center;
+}
+.icon-mini-refresh{
+	background:url('icons/mini_refresh.png') no-repeat center center;
+}
+
+.icon-large-picture{
+	background:url('icons/large_picture.png') no-repeat center center;
+}
+.icon-large-clipart{
+	background:url('icons/large_clipart.png') no-repeat center center;
+}
+.icon-large-shapes{
+	background:url('icons/large_shapes.png') no-repeat center center;
+}
+.icon-large-smartart{
+	background:url('icons/large_smartart.png') no-repeat center center;
+}
+.icon-large-chart{
+	background:url('icons/large_chart.png') no-repeat center center;
+}
+
+
+
+.icon-qq{
+	background:url('icons/qq.png') no-repeat center center;
+}
+
+.icon-tel{
+	background:url('icons/tel.png') no-repeat center center;
+}
+.icon-space{
+	background:url('') no-repeat center center;
+}
+
+.mylinkbtn-load .icon-save{
+	background:url('icons/save-load.png') no-repeat center center;
+}
+
+.mylinkbtn-load .l-btn-text{
+	color:#888888;
+}
+
+/*另外全新增加的icon图标*/
+
+
+.icon-start{
+	background:url('icons/start.png') no-repeat center center;
+}
+
+.icon-stop{
+	background:url('icons/stop.png') no-repeat center center;
+}
+
+.icon-xiuxue{
+	background:url('icons/xiuxue.png') no-repeat center center;
+}
+
+.icon-xiangqing{
+	background:url('icons/xiangqing.png') no-repeat center center;
+}
+.icon-tuixue{
+	background:url('icons/tuixue.png') no-repeat center center;
+}
+.icon-tuixiu{
+	background:url('icons/tuixiu.png') no-repeat center center;
+}
+.icon-tuihuo{
+	background:url('icons/tuihuo.png') no-repeat center center;
+}
+.icon-tixian{
+	background:url('icons/tixian.png') no-repeat center center;
+}
+.icon-shenhe{
+	background:url('icons/shenhe.png') no-repeat center center;
+}
+.icon-quanxian{
+	background:url('icons/quanxian.png') no-repeat center center;
+}
+.icon-lizhi{
+	background:url('icons/lizhi.png') no-repeat center center;
+}
+.icon-liushui{
+	background:url('icons/liushui.png') no-repeat center center;
+}
+.icon-jinzhi{
+	background:url('icons/jinzhi.png') no-repeat center center;
+}
+.icon-jiesuan{
+	background:url('icons/jiesuan.png') no-repeat center center;
+}
+.icon-jiaofei{
+	background:url('icons/jiaofei.png') no-repeat center center;
+}
+.icon-fencheng{
+	background:url('icons/fencheng.png') no-repeat center center;
+}
+.icon-biye{
+	background:url('icons/biye.png') no-repeat center center;
+}
+.icon-chakan{
+	background:url('icons/chakan.png') no-repeat center center;
+}
+.icon-chengyuan{
+	background:url('icons/chengyuan.png') no-repeat center center;
+}
+.icon-daochu{
+	background:url('icons/daochu.png') no-repeat center center;
+}
+.icon-daoru{
+	background:url('icons/daoru.png') no-repeat center center;
+}
+.icon-diaodong{
+	background:url('icons/diaodong.png') no-repeat center center;
+}
+.icon-dingwei{
+	background:url('icons/dingwei.png') no-repeat center center;
+}
+.icon-dujia{
+	background:url('icons/dujia.png') no-repeat center center;
+}
+.icon-fuzhi{
+	background:url('icons/fuzhi.png') no-repeat center center;
+}
+
+
+.icon-down{
+	background:url('icons/down.png') no-repeat center center;
+}
+
+.icon-up{
+	background:url('icons/up.png') no-repeat center center;
+}
+
+/*统计分析报表专用*/
+
+.icon-tj_shijian{
+	background:url('icons/tj_shijian.png') no-repeat center center;
+}
+
+.icon-tj_shijian2{
+	background:url('icons/tj_shijian2.png') no-repeat center center;
+}
+
+
+.icon-tj_fangshi{
+	background:url('icons/tj_fangshi.png') no-repeat center center;
+}
+
+.icon-tj_fangshi2{
+	background:url('icons/tj_fangshi2.png') no-repeat center center;
+}
+
+
+.icon-tj_fangwei{
+	background:url('icons/tj_fangwei.png') no-repeat center center;
+}
+
+.icon-tj_fangwei2{
+	background:url('icons/tj_fangwei2.png') no-repeat center center;
+}
+
+
+.icon-tj_shoufeixiang{
+	background:url('icons/tj_shoufeixiang.png') no-repeat center center;
+}
+
+.icon-tj_shoufeixiang2{
+	background:url('icons/tj_shoufeixiang2.png') no-repeat center center;
+}
+
+
+.icon-tj_shoutuifei{
+	background:url('icons/tj_shoutuifei.png') no-repeat center center;
+}
+
+.icon-tj_shoutuifei2{
+	background:url('icons/tj_shoutuifei2.png') no-repeat center center;
+}
+
+.icon-tj_shipu{
+	background:url('icons/tj_shipu.png') no-repeat center center;
+}
+
+.icon-tj_shipu2{
+	background:url('icons/tj_shipu2.png') no-repeat center center;
+}
+
+
+.icon-tj_kemu{
+	background:url('icons/tj_kemu.png') no-repeat center center;
+}
+
+.icon-tj_kemu2{
+	background:url('icons/tj_kemu2.png') no-repeat center center;
+}
+
+
+.icon-tj_yuefen{
+	background:url('icons/tj_yuefen.png') no-repeat center center;
+}
+
+.icon-tj_yuefen2{
+	background:url('icons/tj_yuefen2.png') no-repeat center center;
+}
+
+
+
+
+
+
+

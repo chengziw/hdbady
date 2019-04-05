@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.StudentMonthCheck" table="t_student_month_check"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+
+		<!-- 1 -->
+		<many-to-one name="student" lazy="false" cascade="none" column="student_id" unique="true"/>
+		<property name="month_label" type="java.lang.String">
+			<column name="month_label" length="32" />
+		</property>
+		<property name="total_days" type="java.lang.String">
+			<column name="total_days" length="32" />
+		</property>
+
+		<!-- 2 -->
+		<property name="actual_clock_days" type="java.lang.String">
+			<column name="actual_clock_days" length="32" />
+		</property>
+		<property name="edit" type="java.lang.String">
+			<column name="edit" length="32" />
+		</property>
+		<property name="date_label" type="java.lang.String">
+			<column name="date_label" length="32" />
+		</property>
+		<property name="date_label_format" type="java.sql.Date" insert="false" update="false">
+			<column name="date_label" length="32" />
+		</property>
+		
+		<!-- 3 -->
+		<property name="year_label" type="java.lang.String">
+			<column name="year_label" length="32" />
+		</property>
+		<set name="studentChecks" cascade="none" inverse="true" order-by="date_label">
+			<key>
+				<column name="student_month_check_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.StudentCheck" />
+		</set>
+	</class>
+</hibernate-mapping>

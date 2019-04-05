@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.Teacher" table="t_teacher"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+		<!-- 1 -->
+		<property name="worknumber" type="java.lang.String">
+			<column name="worknumber" length="32" />
+		</property>
+		<property name="teacher_name" type="java.lang.String">
+			<column name="teacher_name" length="32" />
+		</property>
+		<property name="sex_name" type="java.lang.String">
+			<column name="sex_name" length="32" />
+		</property>
+		<!-- 2 -->
+		<property name="brither_name" type="java.lang.String">
+			<column name="brither_name" length="32" />
+		</property>
+		<property name="age_name" type="java.lang.String">
+			<column name="age_name" length="32"/>
+		</property>
+		<property name="phone" type="java.lang.String">
+			<column name="phone" length="32" />
+		</property>
+		<!-- 3 -->
+		<property name="weixin" type="java.lang.String">
+			<column name="weixin" length="32" />
+		</property>
+		<property name="qq" type="java.lang.String">
+			<column name="qq" length="32" />
+		</property>
+		<property name="structure_name" type="java.lang.String">
+			<column name="structure_name" length="32"/>
+		</property>
+		<!-- 4 -->
+		<property name="duty_name" type="java.lang.String">
+			<column name="duty_name" length="32" />
+		</property>
+		<property name="entry_time_name" type="java.lang.String">
+			<column name="entry_time_name" length="32" />
+		</property>
+		<property name="entry_time_name_date" type="java.sql.Date" insert="false" update="false">
+			<column name="entry_time_name" length="32" />
+		</property>
+		<property name="left_time_name" type="java.lang.String">
+			<column name="left_time_name" length="32"/>
+		</property>
+		<!-- 5 -->
+		<property name="status_name" type="java.lang.String">
+			<column name="status_name" length="32" />
+		</property>
+		<property name="last_login_time_name" type="java.lang.String">
+			<column name="last_login_time_name" length="32"/>
+		</property>
+		<property name="create_time_name" type="java.lang.String">
+			<column name="create_time_name" length="32"/>
+		</property>
+		<!-- 6 -->
+		<property name="edit" type="java.lang.String">
+			<column name="edit" length="32" />
+		</property>
+		<property name="note" type="java.lang.String">
+			<column name="note" length="32"/>
+		</property>
+		<property name="status" type="java.lang.String">
+			<column name="status" length="32"/>
+		</property>
+		<!-- 7 -->
+		<property name="email" type="java.lang.String">
+			<column name="email" length="32" />
+		</property>
+		<property name="password" type="java.lang.String">
+			<column name="password" length="32" />
+		</property>
+		<property name="change_date" type="java.lang.String">
+			<column name="change_date" length="32" />
+		</property>
+		<!-- 8 -->
+		<many-to-one lazy="false" name="teacherDuty"
+			class="com.hrbhd.bady.domain.TeacherDuty" fetch="select">
+			<column name="duty_id" length="32" />
+		</many-to-one>
+	    <property name="structure_id" type="java.lang.String" insert="false" update="false">
+			<column name="structure_id" length="32" />
+		</property> 
+		<property name="class_id" type="java.lang.String" insert="false" update="false">
+			<column name="class_id" length="32" />
+		</property> 
+		<many-to-one lazy="false" name="structure"
+			class="com.hrbhd.bady.domain.Structure" fetch="select">
+			<column name="structure_id" length="32" />
+		</many-to-one>
+	    <set name="roles" table="role_teacher" catalog="hdbady">
+            <key>
+                <column name="teacher_id" length="32" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.hrbhd.bady.domain.Role">
+                <column name="role_id" length="32" not-null="true" />
+            </many-to-many>
+        </set> 
+        
+        <property name="field1" type="java.lang.String">
+			<column name="field1" length="32" />
+		</property> 
+		<property name="field2" type="java.lang.String">
+			<column name="field2" length="32" />
+		</property> 
+		<property name="field3" type="java.lang.String">
+			<column name="field3" length="32" />
+		</property> 
+        
+        <!-- <set name="notices" table="notice_teacher_check" catalog="hdbady">
+            <key>
+                <column name="teacher_id" length="32" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.hrbhd.bady.domain.Notice">
+                <column name="notice_id" length="32" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="asks" table="ask_teacher_check" catalog="hdbady">
+            <key>
+                <column name="teacher_id" length="32" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.hrbhd.bady.domain.Ask">
+                <column name="ask_id" length="32" not-null="true" />
+            </many-to-many>
+        </set> -->
+        <set name="teacherVacations" cascade="delete" inverse="true">
+			<key>
+				<column name="teacher_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.TeacherVacation" />
+		</set>
+		<!-- 10 -->
+		<set name="teacherChecks" cascade="delete" inverse="true">
+			<key>
+				<column name="teacher_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.TeacherCheck" />
+		</set>
+		<set name="teacherMonthChecks" cascade="delete" inverse="true">
+			<key>
+				<column name="teacher_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.TeacherMonthCheck" />
+		</set>
+
+		
+		
+		
+		
+		<many-to-one class="com.hrbhd.bady.domain.Classes" lazy="false" unique="true" name="classes"  
+     	 	column="class_id" cascade="none">
+     	</many-to-one>
+     	
+     	
+     	
+     	
+     	
+     	<!-- 11 -->
+     	<set name="askTeacherChecks" cascade="delete" inverse="true">
+			<key>
+				<column name="teacher_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.AskTeacherCheck" />
+		</set>
+		
+	</class>
+</hibernate-mapping>

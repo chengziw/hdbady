@@ -1,0 +1,93 @@
+.neirong{
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    height: 70px;
+    background: #219CE2;
+    vertical-align: middle;
+    line-height: 70px;
+    overflow: hidden;
+    position: fixed;
+
+
+}
+
+header span{
+    font-size: 24px;
+    color: #D3F0FC;
+    padding-left: 10px;
+    /*background: pink;*/
+    display: block;
+    height: 40px;
+}
+
+header div{
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+   border:2px solid #D3F0FC;
+    float: right;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 15px;
+
+    border-radius: 5px;
+
+
+}
+header div a{
+    color: whitesmoke;
+}
+ /*ul 下面的li，li下面的第一个div，span学科←，span时间右*/
+section{
+    margin-top: 70px;
+}
+ul li div:first-child{
+    width: 100%;
+    height: 50px;
+    /*background: pink;*/
+    line-height: 50px;
+}
+ul li div:first-child span:first-child{
+    float: left;
+    margin-left: 15px;
+    /*background: blue;*/
+}
+
+ul li div:first-child span:last-child{
+    float: right;
+    margin-right: 15px;
+    /*background: blue;*/
+}
+ul li div.tuisongbanji{
+    width: 100%;
+    height: 40px;
+    /*background: orange;*/
+    line-height: 40px;
+    padding-left: 15px;
+
+}
+ul li div.tuisongbanji span:last-child{
+    display: inline-block;
+    /*background: blue;*/
+}
+
+ul li div.xiaoxineirong{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ul li div.tupian{
+    /*background: pink;*/
+    padding-left: 15px;
+    padding-right: 10px;
+}
+ul li div.tupian img{
+    margin: 10px auto;
+    width: 32%;
+    height: 140px;
+    margin-bottom: 30px;
+}
+ul li{
+    border-bottom: 1px solid #aaaaaa;
+}

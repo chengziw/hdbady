@@ -1,0 +1,241 @@
+.neirong{
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    height: 70px;
+    background: #219CE2 ;
+    vertical-align: middle;
+    line-height: 70px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99;
+
+
+}
+
+header span{
+    font-size: 24px;
+    color: #D3F0FC;
+    padding-left: 10px;
+    /*background: pink;*/
+    display: block;
+    height: 40px;
+}
+
+
+section{
+    margin-top: 70px;
+
+}
+
+.nav-tabs{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    background: white;
+
+
+}
+
+.nav-tabs  li{
+    width: 50%;
+    text-align: center;
+    z-index: 1;
+    
+
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #219CE2;
+    cursor: default;
+    background-color: #fff;
+    border: 3px solid #219CE2;
+    border-bottom-color: transparent;
+    font-size: 18px;
+    border-bottom: 0;
+    margin-top: -3px;
+}
+
+
+.nianji{
+    padding-top: 50px;
+    margin-left: 20px;
+}
+
+.nianji .xiaoming{
+    display: inline-block;
+}
+.nianji .select{
+    width: 50%;
+    display: inline-block;
+
+
+}
+
+.baodaoshijian{
+    margin-left: 20px;
+    margin-top: 8px;
+}
+.baodaoshijian input{
+    width: 50%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group{
+    margin-left: 20px;
+    margin-top: 8px;
+}
+.form-group input{
+    width: 50%;
+    display: inline-block;
+
+}
+
+
+.xingbie {
+    /*background: pink;*/
+    /*position: relative;*/
+    margin-left: 20px;
+    height: 34px;
+    width: 100%;
+    margin-top: -8px;
+
+}
+.xingbie span.xingbiezi{
+    float: left;
+    height: 34px;
+    line-height: 34px;
+}
+
+
+
+.xuanze{
+    width: 47.5%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    float: left;
+
+
+
+
+}
+.xuanze .radio-inline:first-child{
+    float: left;
+    margin-left: 15%;
+
+
+}
+.xuanze .radio-inline:last-child{
+    float: right;
+    margin-right: 15%;
+
+
+}
+.xuanze .radio-inline input{
+    width: 20px;
+    height: 17px;
+    font-size: 18px;
+    margin-top: 2px;
+}
+
+
+
+.guanxi{
+    margin-top: -8px;
+    margin-left: 20px;
+}
+
+
+.guanxi .select{
+    width: 50%;
+    display: inline-block;
+
+
+}
+
+
+
+.shurukuang{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.tiqiao{
+    width: 90%;
+    margin: 20px auto;
+}
+
+
+/*、、///////////////////////////////*/
+
+
+
+
+
+.ul-list{
+    padding-top: 50px;
+    /*background: pink;*/
+}
+
+.ul-list li{
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 45px;
+}
+.ul-list li .shenhe{
+    width: 100%;
+    height: 45px;
+    /*background: pink;*/
+    border-bottom: 1px solid #ccc;
+}
+.ul-list li .shenhe div:first-child{
+
+    font-size: 21px;
+    float: left;
+    margin-left: 20px;
+    line-height: 45px;
+}
+.ul-list li .shenhe div:last-child{
+
+    font-size: 21px;
+    float: right;
+    padding-right: 20px;
+    line-height: 45px;
+    color: orange;
+
+}
+
+.ul-list li div.kuai{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.ul-list li div.zui{
+    padding-bottom:  10px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.green{
+    color: green;
+}
+.blue{
+    color: #219CE2;
+}

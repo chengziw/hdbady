@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.TeacherChangeLog" table="t_teacher_change_log"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+		
+		<!-- 1 -->
+		<!-- <many-to-one lazy="false" name="teacher"
+			class="com.hrbhd.bady.domain.Teacher" fetch="select">
+			<column name="teacher_id" length="32" />
+		</many-to-one> -->
+		<property name="worknumber" type="java.lang.String">
+			<column name="worknumber" length="32"/>
+		</property>
+		<property name="teacher_name" type="java.lang.String">
+			<column name="teacher_name" length="32"/>
+		</property>
+		<property name="yearMonthDay" type="java.lang.String">
+			<column name="yearMonthDay" length="32"/>
+		</property>
+		<property name="phone" type="java.lang.String">
+			<column name="phone" length="32"/>
+		</property>
+		<property name="structure_name" type="java.lang.String">
+			<column name="structure_name" length="32"/>
+		</property>
+		<property name="duty_name" type="java.lang.String">
+			<column name="duty_name" length="32"/>
+		</property>
+		
+		<property name="status_name" type="java.lang.String">
+			<column name="status_name" length="32"/>
+		</property>
+		<property name="type_name" type="java.lang.String">
+			<column name="type_name" length="32"/>
+		</property>
+		
+		<!-- 2 -->
+		<property name="change_time_name" type="java.lang.String">
+			<column name="change_time_name" length="32"/>
+		</property>
+		<property name="note" type="java.lang.String">
+			<column name="note" length="32"/>
+		</property>
+		<property name="operation_name" type="java.lang.String">
+			<column name="operation_name" length="32"/>
+		</property>
+		
+		<!-- 3 -->
+		<property name="create_name" type="java.lang.String">
+			<column name="create_name" length="32"/>
+		</property>
+		<property name="change_time_name_format" type="java.sql.Date" insert="false" update="false">
+			<column name="change_time_name" length="32"/>
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,82 @@
+
+
+{
+  "hasMore":false,
+  "qingjiaList": [
+
+    {
+      "yuanyin":"事假",
+      "startTime":"2017-4-8",
+      "endTime":"2017-5-5",
+      "check":"未通过",
+      "content":"因朋友结婚，需前去随礼，还望领导批准！"
+    }
+    ,
+    {
+      "yuanyin":"病假",
+      "startTime":"2017-4-9",
+      "endTime":"2017-5-5",
+      "check":"已通过",
+      "content":"因朋友结婚，需前去随礼，还望领导批准！"
+    }
+    ,
+    {
+      "yuanyin":"病假",
+      "startTime":"2017-4-10",
+      "endTime":"2017-5-5",
+      "check":"审批中",
+      "content":"因朋友结婚，需前去随礼，还望领导批准！"
+    } ,
+    {
+      "yuanyin":"病假",
+      "startTime":"2017-4-10",
+      "endTime":"2017-5-5",
+      "check":"审批中",
+      "content":"因朋友结婚，需前去随礼，还望领导批准！"
+    } ,
+    {
+      "yuanyin":"病假",
+      "startTime":"2017-4-10",
+      "endTime":"2017-5-5",
+      "check":"审批中",
+      "content":"因朋友结婚，需前去随礼，还望领导批准！"
+    } ,
+    {
+      "yuanyin":"病假",
+      "startTime":"2017-4-10",
+      "endTime":"2017-5-5",
+      "check":"审批中",
+      "content":"因朋友结婚，需前去随礼，还望领导批准！"
+    } ,
+    {
+      "yuanyin":"病假",
+      "startTime":"2017-4-10",
+      "endTime":"2017-5-5",
+      "check":"审批中",
+      "content":"因朋友结婚，需前去随礼，还望领导批准！"
+    } ,
+    {
+      "yuanyin":"病假",
+      "startTime":"2017-4-10",
+      "endTime":"2017-5-5",
+      "check":"审批中",
+      "content":"因朋友结婚，需前去随礼，还望领导批准！"
+    } ,
+    {
+      "yuanyin":"病假",
+      "startTime":"2017-4-10",
+      "endTime":"2017-5-5",
+      "check":"审批中",
+      "content":"因朋友结婚，需前去随礼，还望领导批准！"
+    } ,
+    {
+      "yuanyin":"病假",
+      "startTime":"2017-4-10",
+      "endTime":"2017-5-5",
+      "check":"审批中",
+      "content":"因朋友结婚，需前去随礼，还望领导批准！"
+    }
+
+
+  ]
+}

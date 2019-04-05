@@ -1,0 +1,76 @@
+/*这是用于初始化得css*/
+
+
+*,
+::before,
+::after{
+  margin: 0;
+  padding: 0;
+
+  -webkit-tap-highlight-color: transparent;/*清除点击默认的高亮效果*/
+
+  -webkit-box-sizing: border-box;/*以你的border开始计算你的宽度*/
+
+}
+
+body{
+  font-size: 14px;
+  font-family: "Microsoft YaHei",sans-serif;/*第二个是手机的一个默认的字体*/
+  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+  color: #000;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+a:hover{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+/*input,textarea{*/
+  /*border: none;*/
+  /*resize: none;*/
+  /*outline: none;/!*清除选中效果*!/*/
+
+  /*-webkit-appearance: none;/!*清楚浏览器默认的样式*!/*/
+/*}*/
+
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after{
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+
+
+ .neirong{
+  min-width: 300px;
+  max-width: 640px;
+
+  margin: 0 auto;
+  position: relative;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

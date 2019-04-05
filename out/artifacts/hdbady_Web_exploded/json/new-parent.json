@@ -1,0 +1,161 @@
+{
+    "status": 1,
+    "info": [
+        {
+            "id": "0",
+            "name": "C小班",
+            "pid": 0,
+            "children": [
+                {
+                    "id": "0",
+                    "name": "C 110",
+                    "pid": 0
+                },
+                {
+                    "id": "1",
+                    "name": "测1",
+                    "pid": 0
+                },
+                {
+                    "id": "2",
+                    "name": "dfsd ",
+                    "pid": 0
+                },
+                {
+                    "id": "3",
+                    "name": "C2",
+                    "pid": 0
+                },
+                {
+                    "id": "4",
+                    "name": "一大班",
+                    "pid": 0
+                },
+                {
+                    "id": "5",
+                    "name": "e534",
+                    "pid": 0
+                },
+                {
+                    "id": "6",
+                    "name": "C一班",
+                    "pid": 0
+                },
+                {
+                    "id": "7",
+                    "name": "c8",
+                    "pid": 0
+                }
+            ]
+        },
+        {
+            "id": "1",
+            "name": "er ",
+            "pid": 0,
+            "children": [
+                {
+                    "id": "0",
+                    "name": "6575y",
+                    "pid": 0
+                },
+                {
+                    "id": "1",
+                    "name": "6669999696",
+                    "pid": 0
+                },
+                {
+                    "id": "2",
+                    "name": "王",
+                    "pid": 0
+                },
+                {
+                    "id": "3",
+                    "name": "对方水电",
+                    "pid": 0
+                },
+                {
+                    "id": "4",
+                    "name": "678987",
+                    "pid": 0
+                },
+                {
+                    "id": "5",
+                    "name": "345345454",
+                    "pid": 0
+                },
+                {
+                    "id": "6",
+                    "name": "水电费水电费1",
+                    "pid": 0
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "瑟尔",
+            "pid": 0,
+            "children": [
+                {
+                    "id": "0",
+                    "name": "adaad",
+                    "pid": 0
+                },
+                {
+                    "id": "1",
+                    "name": "asdasdas",
+                    "pid": 0
+                },
+                {
+                    "id": "2",
+                    "name": "asdasdas",
+                    "pid": 0
+                },
+                {
+                    "id": "3",
+                    "name": "999",
+                    "pid": 0
+                },
+                {
+                    "id": "4",
+                    "name": "asdasdas",
+                    "pid": 0
+                },
+                {
+                    "id": "5",
+                    "name": "adaad",
+                    "pid": 0
+                },
+                {
+                    "id": "6",
+                    "name": "tertiary",
+                    "pid": 0
+                },
+                {
+                    "id": "7",
+                    "name": "asdasdas",
+                    "pid": 0
+                },
+                {
+                    "id": "8",
+                    "name": "adaad",
+                    "pid": 0
+                },
+                {
+                    "id": "9",
+                    "name": "asdasdas",
+                    "pid": 0
+                },
+                {
+                    "id": "10",
+                    "name": "asdasdas",
+                    "pid": 0
+                },
+                {
+                    "id": "11",
+                    "name": "dsfsd",
+                    "pid": 0
+                }
+            ]
+        }
+    ]
+}

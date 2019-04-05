@@ -1,0 +1,75 @@
+[
+    {
+        "id": "",
+        "name": "全部学校",
+        "gradeComBoTreeData": [
+            {
+                "id": 0,
+                "name": "全部年级",
+                "children": []
+            }
+        ]
+    }
+    {
+        "id": 13,
+        "name": "司南学辅",
+        "gradeList": [
+            {
+                "id": "",
+                "name": "全部年级"
+            },
+            {
+                "id": 71,
+                "name": "小班",
+                "sort": 1,
+                "classList": [
+                    {
+                        "id": "",
+                        "name": "全部班级"
+                    }
+                ]
+            },
+            {
+                "id": 72,
+                "name": "中班",
+                "sort": 2,
+                "classList": [
+                    {
+                        "id": "",
+                        "name": "全部班级"
+                    },
+                    {
+                        "id": 25,
+                        "name": "一班"
+                    }
+                ]
+            }
+        ],
+        "gradeComBoTreeData": [
+            {
+                "id": 0,
+                "name": "全部年级",
+                "children": [
+                    {
+                        "id": 71,
+                        "name": "小班",
+                        "pid": 2,
+                        "children": []
+                    },
+                    {
+                        "id": 72,
+                        "name": "中班",
+                        "pid": 2,
+                        "children": [
+                            {
+                                "id": 25,
+                                "name": "一班",
+                                "pid": 3
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

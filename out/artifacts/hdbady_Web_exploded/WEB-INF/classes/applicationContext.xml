@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/aop
+						http://www.springframework.org/schema/aop/spring-aop.xsd
+						http://www.springframework.org/schema/tx 
+						http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- 加载jdbc属性文件 -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
+
+	<!-- 数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${driverClass}" />
+		<property name="jdbcUrl" value="${jdbcUrl}" />
+		<property name="user" value="${user}" />
+		<property name="password" value="${password}" />
+	</bean>
+
+	<!-- spring框架用于整合Hibernate的工厂bean -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<!-- 注入Hibernate相关的属性 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<!-- 注入Hibernate的映射文件 -->
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:com/hrbhd/bady/domain</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 组件扫描 -->
+	<context:component-scan base-package="com.hrbhd.bady" />
+	<!-- 引入注解解析器 -->
+	<context:annotation-config />
+	<!-- 事务注解 -->
+	<tx:annotation-driven />
+
+	<!-- 配置一个工厂bean，用于创建shiro框架用到过滤器 -->
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<!-- 注入安全管理器 -->
+		<property name="securityManager" ref="securityManager"></property>
+		<!-- 注入当前系统的登录页面 -->
+		<property name="loginUrl" value="/teacherAction_loginPrepare.action" />
+		<!-- 注入成功页面 -->
+		<property name="successUrl" value="/index.jsp" />
+		<!-- 注入权限不足提示页面 -->
+		<property name="unauthorizedUrl" value="/nopower.jsp"/>
+		<!-- 注入URL拦截规则 -->
+		<property name="filterChainDefinitions">
+			<value>
+				/css/** = anon
+				/image/** = anon
+				/images/** = anon
+				/js/** = anon
+				/json/** = anon
+				/teacher/** = anon
+				/parent/** = anon
+				/index.jsp = anon
+				/login.jsp = anon
+				/nopower.jsp = anon
+				/index-teacher.jsp = anon
+				/index-parent.jsp = anon
+				/tlogin.jsp = anon
+				/plogin.jsp = anon
+				/teacherAction_loginPrepare.action = anon
+				/teacherAction_login.action = anon
+				/teacherAction_t_login.action = anon
+				/studentAction_p_login.action = anon
+				/teacherAction_teacherLogin.action = anon
+				/studentAction_parentLogin.action = anon
+				/page_common_index-teacher.action = anon
+				/page_common_index-parent.action = anon
+				
+				/askAction_t_ask.action = anon
+				/askAction_p_ask.action = anon
+				/askAction_t_checkAsk.action = anon
+				/askAction_p_checkAsk.action = anon
+				/askAction_t_pageQuery.action = anon
+				/askAction_p_pageQuery.action = anon
+				/classesAction_t_classRing.action = anon
+				/cookBookAction_t_add.action = anon
+				/cookBookAction_t_pageQuery.action = anon
+				/cookBookAction_t_cookBook.action = anon
+				/cookBookAction_p_cookBook.action = anon
+				/cookBookAction_t_addCookBook.action = anon
+				
+				/cookBookAction_p_pageQuery.action = anon
+				/curriculaTableAction_t_look.action = anon
+				/curriculaTableAction_p_look.action = anon
+				/curriculaTableAction_t_classCurricula.action = anon
+				/curriculaTableAction_p_classCurricula.action = anon
+				/homeWorkAction_t_add.action = anon
+				/homeWorkAction_t_homeWork.action = anon
+				/homeWorkAction_t_addHomeWork.action = anon
+				/homeWorkAction_t_pageQuery.action = anon
+				/homeWorkAction_p_homeWork.action = anon
+				/homeWorkAction_p_pageQuery.action = anon
+				
+				/noticeAction_t_notice.action = anon
+				/noticeAction_t_pageQuery.action = anon
+				/noticeAction_t_read.action = anon
+				/noticeAction_p_notice.action = anon
+				/noticeAction_p_pageQuery.action = anon
+				/noticeAction_p_read.action = anon
+				/teacherVacationAction_t_teacherVacation.action = anon
+				/teacherMonthCheckAction_t_teacherMonthCheck.action = anon
+				/teacherMonthCheckAction_t_pageQuery.action = anon
+				/teacherCheckAction_t_teacherCheck.action = anon
+				/teacherCheckAction_t_addTeacherCheck.action = anon
+				/teacherAction_findAll.action = anon
+				/teacherAction_t_teacherNews.action = anon
+				/teacherAction_t_home.action = anon
+				/teacherAction_t_aboutWe.action = anon
+				/teacherAction_t_about.action = anon
+				/teacherAction_t_email.action = anon
+				/teacherAction_t_img.action = anon
+				/teacherAction_t_logout.action = anon
+				/teacherAction_t_mine.action = anon
+				/teacherAction_t_phone.action = anon
+				/teacherAction_t_qq.action = anon
+				/teacherAction_t_question.action = anon
+				/teacherAction_t_wechat.action = anon
+				/teacherAction_t_news.action = anon
+				/teacherAction_t_teacherNews.action = anon
+				/teacherAction_t_changeInfo.action = anon
+				/studentCheckAction_t_studentComeAndGo.action = anon
+				/studentCheckAction_t_addStudentCheck.action = anon
+				
+				/teacherVacationAction_t_pageQuery.action = anon
+				/teacherVacationAction_t_addTeacherVacation.action = anon
+
+				/studentVacationAction_t_checkStudentVacation.action = anon
+				/studentVacationAction_t_pageQuery.action = anon
+				/studentCheckAction_t_pageQuery.action = anon
+				/studentCheckAction_t_pageQuery.action = anon
+				/studentBespeakAction_p_add.action = anon
+				/studentVacationAction_p_studentVacation.action = anon
+				/studentVacationAction_t_studentVacationCheck.action = anon
+				/studentVacationAction_p_pageQuery.action = anon
+				/studentMonthCheckAction_p_studentMonthCheck.action = anon
+				/studentMonthCheckAction_p_pageQuery.action = anon
+				/studentAction_p_news.action = anon
+				/studentAction_p_home.action = anon
+				/studentAction_p_about.action = anon
+				/studentAction_p_aboutt.action = anon
+			    /studentAction_p_aboutStudent.action = anon
+				/studentAction_p_studentPhone.action = anon
+				/studentAction_p_aboutWe.action = anon
+				/studentAction_p_email.action = anon
+				/studentAction_p_img.action = anon
+				/studentAction_p_logout.action = anon
+				/studentAction_p_mine.action = anon
+				/studentAction_p_phone.action = anon
+				/studentAction_p_qq.action = anon
+				/studentAction_p_question.action = anon
+				/studentAction_p_setParent.action = anon
+				/studentAction_p_wechat.action = anon
+				/studentAction_t_studentPhoto.action = anon
+				/studentAction_t_studentPhotoPublish.action = anon
+				/studentAction_t_importPicture.action = anon
+				/studentAction_t_studentList.action = anon
+				/studentAction_p_news.action = anon
+				/studentAction_p_studentNews.action = anon
+				/studentAction_p_changeInfo.action = anon
+				/schoolAction_p_about.action = anon
+				/schoolAction_p_aboutSchool.action = anon
+				/subjectAction_t_findAllSubjectToHomeWorkAdd.action = anon
+				/subjectAction_p_findAllSubjectToHomeWorkAdd.action = anon
+				/* = authc
+			</value>
+		</property>
+	</bean>
+
+	<!-- 注册自定义realm -->
+	<bean id="myRealm" class="com.hrbhd.bady.shiro.MyRealm"></bean>
+
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<!-- 注入上面的realm -->
+		<property name="realm" ref="myRealm" />
+		<!-- 注入缓存管理器 -->
+		<property name="cacheManager" ref="cacheManager" />
+	</bean>
+
+	<!-- 注册缓存管理器 -->
+	<bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+		<!-- 注入ehcache配置文件 -->
+		<property name="cacheManagerConfigFile" value="classpath:ehcache.xml" />
+	</bean>
+
+	<!-- 开启shiro注解 -->
+	<!-- 自动代理 -->
+	<bean id="defaultAdvisorAutoProxyCreator"
+		class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+		<!-- 强制使用cglib为Action创建代理对象 -->
+		<property name="proxyTargetClass" value="true"></property>
+	</bean>
+
+	<!-- 切面类 -->
+	<bean
+		class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	<!-- ======================== 配置调度类和方法 ======================== -->
+	<!-- 使用MethodInvokingJobDetailFactoryBean，任务类可以不实现Job接口，通过targetMethod指定调用方法定义目标bean和bean中的方法 --> 
+	<bean id="MyQuartzJob" class="com.hrbhd.bady.quartz.MyQuartz">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="MyQuartzJobMethod1"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="MyQuartzJob" />
+		</property>
+		<property name="targetMethod">  <!-- 要执行的方法名称 -->
+			<value>addStudentCheck</value>
+		</property>
+	</bean>
+	<bean id="MyQuartzJobMethod2"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="MyQuartzJob" />
+		</property>
+		<property name="targetMethod">  <!-- 要执行的方法名称 -->
+			<value>addStudentMonthCheck</value>
+		</property>
+	</bean>
+	<bean id="MyQuartzJobMethod3"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="MyQuartzJob" />
+		</property>
+		<property name="targetMethod">  <!-- 要执行的方法名称 -->
+			<value>addTeacherCheck</value>
+		</property>
+	</bean>
+	<bean id="MyQuartzJobMethod4"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="MyQuartzJob" />
+		</property>
+		<property name="targetMethod">  <!-- 要执行的方法名称 -->
+			<value>addTeacherMonthCheck</value>
+		</property>
+	</bean>
+
+
+	<!-- ======================== 调度触发器 ======================== -->
+	<bean id="CronTriggerBean1" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="MyQuartzJobMethod1"></property>
+		<property name="cronExpression" value="0/60 * * * * ?"></property>
+	</bean>
+	<bean id="CronTriggerBean2" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="MyQuartzJobMethod2"></property>
+		<property name="cronExpression" value="0/60 * * * * ?"></property>
+	</bean>
+	<bean id="CronTriggerBean3" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="MyQuartzJobMethod3"></property>
+		<property name="cronExpression" value="0/60 * * * * ?"></property>
+	</bean>
+	<bean id="CronTriggerBean4" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="MyQuartzJobMethod4"></property>
+		<property name="cronExpression" value="0/60 * * * * ?"></property>
+	</bean>
+	<!-- 每60秒执行一次: 0/60 * * * * ? -->
+	<!-- 每天24点执行一次：0 0 24 * * ? -->
+	<!-- "0 00 00 ? * MON-FRI" 周一至周五的00:00触发  -->
+	<!-- "0 00 1 1 * ?" 每月1日01:00触发 --> 
+
+	<!-- ======================== 调度工厂 ======================== -->
+	<bean id="SpringJobSchedulerFactoryBean"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!-- <ref bean="CronTriggerBean1" />
+				<ref bean="CronTriggerBean2" />
+				<ref bean="CronTriggerBean3" />
+				<ref bean="CronTriggerBean4" /> -->
+			</list>
+		</property>
+	</bean>
+
+
+
+
+</beans>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.TeacherDuty" table="t_teacher_duty"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+
+		<!-- 1 -->
+		<property name="duty_name" type="java.lang.String">
+			<column name="duty_name" length="32" />
+		</property>
+		<property name="status" type="java.lang.String">
+			<column name="status" length="32" />
+		</property>
+		<property name="status_name" type="java.lang.String">
+			<column name="status_name" length="32" />
+		</property>
+
+		<!-- 2 -->
+		<property name="edit" type="java.lang.String">
+			<column name="edit" length="32" />
+		</property>
+		<set name="teachers" cascade="none" inverse="true">
+			<key>
+				<column name="duty_id"/>
+			</key>
+			<one-to-many class="com.hrbhd.bady.domain.Teacher" />
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.CurriculaTableItem" table="t_curricula_table_item"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+
+		<!-- 1 -->
+		<many-to-one lazy="false" name="curriculaTable" cascade="all"
+			class="com.hrbhd.bady.domain.CurriculaTable" fetch="select">
+			<column name="curricula_table_id" length="32" />
+		</many-to-one>
+		
+		<property name="teacher_name" type="java.lang.String">
+			<column name="teacher_name" length="32" />
+		</property>
+		<property name="subject_name" type="java.lang.String">
+			<column name="subject_name" length="32" />
+		</property>
+
+		<!-- 2 -->
+		<property name="course" type="java.lang.String">
+			<column name="course" length="32" />
+		</property>
+		<property name="week" type="java.lang.String">
+			<column name="week" length="32" />
+		</property>
+		<property name="teacher_id" type="java.lang.String">
+			<column name="teacher_id" length="32" />
+		</property>
+		<!-- 3 -->
+		<property name="curricula_table_id" type="java.lang.String" insert="false" update="false">
+			<column name="curricula_table_id" length="32" />
+		</property>
+	</class>
+</hibernate-mapping>

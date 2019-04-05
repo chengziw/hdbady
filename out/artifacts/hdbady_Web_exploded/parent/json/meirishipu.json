@@ -1,0 +1,70 @@
+
+
+{
+  "hasMore": true,
+  "cookbookList": [
+    {
+      "audio_url": "url",
+      "classlist": {
+        "classid": 1,
+        "teachername": "老师名",
+        "gradeid": 1,
+        "gradname": "托班"
+      },
+      "content": "和触犯",
+      "create_time": "2017-3-30 12:25",
+      "duration": 0,
+
+      "images": [
+        {"imgurl":"images/close.png"},
+        {"imgurl":"images/close.png"}
+      ],
+      "iscurrentterm": "true",
+
+      "typeName": "早餐"
+    }
+  ,
+    {
+      "audio_url": "url",
+      "classlist": {
+        "classid": 1,
+        "teachername": "老师名",
+        "gradeid": 1,
+        "gradname": "托班"
+      },
+      "content": "和11触犯",
+      "create_time": 1490266900,
+      "duration": 0,
+
+      "images": [
+        {"imgurl":"images/close.png"},
+        {"imgurl":"images/close.png"}
+      ],
+      "iscurrentterm": "true",
+
+      "typeName": "午餐"
+    },
+    {
+      "audio_url": "url",
+      "classlist": {
+        "classid": 1,
+        "teachername": "老师名",
+        "gradeid": 1,
+        "gradname": "托班"
+      },
+      "content": "和11触犯和11触犯和11触犯和11触犯和11触犯和11触犯和11触犯和11触犯",
+      "create_time": 1490266900,
+      "duration": 0,
+      "homeworkid": 68,
+      "images": [
+        {"imgurl":"images/close.png"},
+        {"imgurl":"images/close.png"},
+        {"imgurl":"images/close.png"}
+      ],
+      "iscurrentterm": "true",
+
+      "typeName": "晚餐"
+    }
+  ],
+  "servertime":"1111111111"
+}

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hrbhd.bady.domain.School" table="t_school"
+		catalog="hdbady">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="uuid" />
+		</id>
+		<!-- 1 -->
+		<property name="school_name" type="java.lang.String">
+			<column name="school_name" length="32" />
+		</property>
+		<property name="province_name" type="java.lang.String">
+			<column name="province_name" length="32" />
+		</property>
+		<property name="city_name" type="java.lang.String">
+			<column name="city_name" length="32" />
+		</property>
+		<!-- 2 -->
+		<property name="area_name" type="java.lang.String">
+			<column name="area_name" length="32" />
+		</property>
+		<property name="school_addr" type="java.lang.String">
+			<column name="school_addr" length="32" />
+		</property>
+		<property name="first_start_month" type="java.lang.String">
+			<column name="first_start_month" length="32" />
+		</property>
+		<!-- 3 -->
+		<property name="last_start_month" type="java.lang.String">
+			<column name="last_start_month" length="32" />
+		</property>
+		<property name="next_class_up_date" type="java.lang.String">
+			<column name="next_class_up_date" length="32" />
+		</property>
+		<property name="last_class_up_date" type="java.lang.String">
+			<column name="last_class_up_date" length="32" />
+		</property>
+		<!-- 4 -->
+		<property name="school_level" type="java.lang.String">
+			<column name="school_level" length="32" />
+		</property>
+		<property name="edit" type="java.lang.String">
+			<column name="edit" length="32" />
+		</property>
+		<!-- 后加的 -->
+		<property name="about_info" type="java.lang.String">
+			<column name="about_info" length="32" />
+		</property>
+		<!-- 5 -->
+		<property name="first_termname" type="java.lang.String">
+			<column name="first_termname" length="32" />
+		</property>
+		<property name="first_term_month" type="java.lang.String">
+			<column name="first_term_month" length="32" />
+		</property>
+		<property name="last_termname" type="java.lang.String">
+			<column name="last_termname" length="32" />
+		</property>
+		<!-- 6 -->
+		<property name="last_term_month" type="java.lang.String">
+			<column name="last_term_month" length="32" />
+		</property>
+		<property name="up_month" type="java.lang.String">
+			<column name="up_month" length="32" />
+		</property>
+		<property name="up_day" type="java.lang.String">
+			<column name="up_day" length="32" />
+		</property>
+		<!-- 7 -->
+		<property name="tags" type="java.lang.String">
+			<column name="tags" length="32" />
+		</property>
+		<property name="supply_way" type="java.lang.String">
+			<column name="supply_way" length="32" />
+		</property>
+		<property name="supply_range" type="java.lang.String">
+			<column name="supply_range" length="32" />
+		</property>
+		<!-- 8 -->
+		<property name="supply_number" type="java.lang.String">
+			<column name="supply_number" length="32" />
+		</property>
+		<property name="supply_fee" type="java.lang.String">
+			<column name="supply_fee" length="32" />
+		</property>
+		<property name="cantact_man1" type="java.lang.String">
+			<column name="cantact_man1" length="32" />
+		</property>
+		<!-- 9 -->
+		<property name="cantact_phone1" type="java.lang.String">
+			<column name="cantact_phone1" length="32" />
+		</property>
+		<property name="cantact_man2" type="java.lang.String">
+			<column name="cantact_man2" length="32" />
+		</property>
+		<property name="cantact_phone2" type="java.lang.String">
+			<column name="cantact_phone2" length="32" />
+		</property>
+		<!-- 10 -->
+		<property name="sharesite_title" type="java.lang.String">
+			<column name="sharesite_title" length="32" />
+		</property>
+		<property name="sharesite_desc" type="java.lang.String">
+			<column name="sharesite_desc" length="32" />
+		</property>
+		
+		<property name="longitude" type="java.lang.String">
+			<column name="longitude" length="32" />
+		</property>
+		<property name="latitude" type="java.lang.String">
+			<column name="latitude" length="32" />
+		</property>
+		
+		<!-- 图片类型1 -->
+		<property name="imageUrl1" type="java.lang.String">
+			<column name="imageUrl1" length="100" />
+		</property>
+		<property name="imageUrl2" type="java.lang.String">
+			<column name="imageUrl2" length="100" />
+		</property>
+		<property name="imageUrl3" type="java.lang.String">
+			<column name="imageUrl3" length="100" />
+		</property>
+		<property name="imageUrl4" type="java.lang.String">
+			<column name="imageUrl4" length="100" />
+		</property>
+		<property name="imageUrl5" type="java.lang.String">
+			<column name="imageUrl5" length="100" />
+		</property>
+		<property name="imageUrl6" type="java.lang.String">
+			<column name="imageUrl6" length="100" />
+		</property>
+		
+		<!-- 图片类型2 -->
+		<property name="imageUrl7" type="java.lang.String">
+			<column name="imageUrl7" length="100" />
+		</property>
+		<property name="imageUrl8" type="java.lang.String">
+			<column name="imageUrl8" length="100" />
+		</property>
+		<property name="imageUrl9" type="java.lang.String">
+			<column name="imageUrl9" length="100" />
+		</property>
+		<property name="imageUrl10" type="java.lang.String">
+			<column name="imageUrl10" length="100" />
+		</property>
+		<property name="imageUrl11" type="java.lang.String">
+			<column name="imageUrl11" length="100" />
+		</property>
+		<property name="imageUrl12" type="java.lang.String">
+			<column name="imageUrl12" length="100" />
+		</property>
+		
+		<!-- 图片类型3 -->
+		<property name="imageUrl13" type="java.lang.String">
+			<column name="imageUrl13" length="100" />
+		</property>
+		<property name="imageUrl14" type="java.lang.String">
+			<column name="imageUrl14" length="100" />
+		</property>
+		<property name="imageUrl15" type="java.lang.String">
+			<column name="imageUrl15" length="100" />
+		</property>
+		<property name="imageUrl16" type="java.lang.String">
+			<column name="imageUrl16" length="100" />
+		</property>
+		<property name="imageUrl17" type="java.lang.String">
+			<column name="imageUrl17" length="100" />
+		</property>
+		<property name="imageUrl18" type="java.lang.String">
+			<column name="imageUrl18" length="100" />
+		</property>
+		
+		
+	</class>
+</hibernate-mapping>

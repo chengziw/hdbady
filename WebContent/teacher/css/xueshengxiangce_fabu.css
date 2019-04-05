@@ -1,0 +1,144 @@
+.neirong{
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    height: 70px;
+    background: #219CE2 ;
+    vertical-align: middle;
+    line-height: 70px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99;
+
+
+}
+
+header span{
+    font-size: 24px;
+    color: #D3F0FC;
+    padding-left: 10px;
+    /*background: pink;*/
+    display: block;
+    height: 40px;
+}
+
+
+section{
+    margin-top: 10px;
+}
+/*input,textarea{*/
+/*border: none;*/
+/*resize: none;*/
+/*outline: none;/!*清除选中效果*!/*/
+
+/*-webkit-appearance: none;/!*清楚浏览器默认的样式*!/*/
+/*}*/
+input[type="checkbox"]{
+    width: 20px;
+    height: 17px;
+    margin-top: 2px;
+
+}
+label.checkbox-inline{
+    margin-left: 20px !important;
+}
+.xueke{
+    /*background: pink;*/
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 83px;
+}
+.shurukuang{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 22px;
+}
+.xuanzetupian{
+    /*background: pink;*/
+    width: 67px;
+    height: 63px;
+
+    background:url("zhaoxiang.PNG") no-repeat center center;
+    overflow: hidden;
+    margin-left: 14px;
+    display: inline-block;
+    margin-top: 10px;
+
+}
+input#fileImage{
+    opacity: 0.01;
+    background: white;
+    border: none;
+    resize: none;
+    outline: none;/*清除选中效果*/
+
+    -webkit-appearance: none;/*清楚浏览器默认的样式*/
+    width: 67px;
+    height: 63px;
+    display: inline-block;
+    background: pink;
+    padding-left: 15px;
+    padding-top: 10px;
+
+
+}
+.upload_submit{
+    float: right;
+}
+.upload_submit_btn{
+    width: 70px;
+    height: 50px;
+    background: #219CE2 ;
+    color: #D3F0FC;
+    float: right;
+    margin-right: 19px;
+    margin-top: 18px;
+    display: inline-block;
+}
+
+.upload_preview{
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+    /*background: red;*/
+
+    padding-right: 15px;
+
+}
+
+.upload_append_list{
+    display: inline-block;
+    width: 30%;
+    height: 100px;
+    float: left;
+    /*background: blue;*/
+    margin-left: 10px;
+    margin-top: 30px;
+
+}
+img{
+    width: 100%;
+    height: 100px;
+
+
+}
+.upload_delete{
+    background: red;
+    float: right;
+}
+.upload_inf{
+    overflow: auto;
+    width: 100%;
+    height: 80px;
+    /*background: pink;*/
+    margin-left: 15px;
+    margin-top: 20px;
+}
+#studentName{
+    margin-left: 10px;
+    font-size: 18px;
+    color: #444444;
+    /*background: red;*/
+
+}
