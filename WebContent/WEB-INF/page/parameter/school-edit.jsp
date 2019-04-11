@@ -294,7 +294,7 @@
 
 
 				</div>
-</form>
+        </div>  </div></div></form>
 
             <div class="tab_box" style="display: none">
                 <table cellspacing="0" cellpadding="6" border="0">
@@ -303,7 +303,7 @@
                         <td style="position: relative;" align="right">
                             <form id="img01_form" name="submit" enctype="multipart/form-data" data-href="${pageContext.request.contextPath}/schoolAction_importPicture.action" method="post">
                             <input value="上传" multiple="multiple" id="img01" name="img_file" type="file">
-                            <a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add" group="" id="">上传</a>
+                            <a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add" group="">上传</a>
                                 <input name="type" value="1" type="hidden">
                             </form>
                             
@@ -369,7 +369,7 @@
                         <td style="position: relative;" align="right">
                             <form id="img02_form" name="submit" enctype="multipart/form-data" data-href="${pageContext.request.contextPath}/schoolAction_importPicture.action" method="post">
                             <input value="上传" multiple="multiple" id="img02" name="img_file" type="file">
-                            <a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add" group="" id="">上传</a>
+                            <a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add" group="">上传</a>
                                 <input name="type" value="2" type="hidden">
                             </form>
                         </td>
@@ -435,7 +435,7 @@
                         <td style="position: relative;" align="right">
                             <form id="img03_form" name="submit" enctype="multipart/form-data" data-href="${pageContext.request.contextPath}/schoolAction_importPicture.action" method="post">
                             <input value="上传" multiple="multiple" id="img03" name="img_file" type="file">
-                            <a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add" group="" id="">上传</a>
+                            <a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add" group="">上传</a>
                                 <input name="type" value="3" type="hidden">
                             </form>
                         </td>
