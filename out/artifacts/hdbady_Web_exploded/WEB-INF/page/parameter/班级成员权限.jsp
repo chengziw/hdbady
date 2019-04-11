@@ -327,7 +327,7 @@
         </div>
 
         <div region="center" border="false" style="overflow:hidden;background-color:#E0ECFF; ">
-            <div id="dlg-buttons" style="background-color:#E0ECFF; padding-top:8px; padding-bottom:0px; float:right;">
+            <div id="dlg-buttons" style="background-color:#E0ECFF; padding-top:2px; padding-bottom:3px; float:right;">
                 <a href="#" class="easyui-linkbutton" id="save-btn" iconCls="icon-save" onClick="saveSchool()">保存</a>
                 <a href="#" class="easyui-linkbutton panel-tool-close" iconCls="icon-no" onClick="javascript:parent.$('#openWindow').window('close');">取消</a>
             </div>

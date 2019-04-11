@@ -36,7 +36,7 @@
 
         <div class="renyuanxinxi">
             <!--幼儿园名称-->
-            <span class="youeryuanmingcheng">华德幼儿园</span>
+            <span class="youeryuanmingcheng">汤圆幼儿园</span>
             <!--部门-->
             <span> &gt; </span>
             <span class="bumen"><s:property value="#session.loginTeacher.teacherDuty.duty_name"/></span>

@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <html><head>
         <meta charset="UTF-8">
-        <title>华德幼儿园</title>
+        <title>汤圆幼儿园</title>
         <link rel="icon" href="/dear_assets/images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="/dear_assets/js/easyui-1.4.4/themes/default/easyui.css">
         <link rel="stylesheet" type="text/css" href="/dear_assets/js/easyui-1.4.4/themes/icon.css">

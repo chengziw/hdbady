@@ -40,7 +40,7 @@
                 	<td align="right">学号：</td>
                     <td><input id="student_no" name="student_no" value="<s:property value="student.student_no"/>" required="true" class="easyui-textbox textbox-f" data-options="validType:['MaxLength']" style="display: none;" textboxname="student_no"></td>
                     <td align="right">学校：</td>
-                    <td><input id="school_name" required="true" value="华德幼儿园" disabled="disabled" class="easyui-textbox textbox-f" style="display: none;" textboxname="school_name"></td>
+                    <td><input id="school_name" required="true" value="汤圆幼儿园" disabled="disabled" class="easyui-textbox textbox-f" style="display: none;" textboxname="school_name"></td>
                	 	<td align="right">年级：</td>
                     <td><input id="grade_id" value="<s:property value="student.classes.grade.name"/>" data-options="panelHeight:'auto'" class="combobox-f combo-f textbox-f" style="display: none;" disabled="disabled" ></td>
               		<%-- <input name="grade_id" value="<s:property value="student.grade.id"/>" type="hidden"> --%>

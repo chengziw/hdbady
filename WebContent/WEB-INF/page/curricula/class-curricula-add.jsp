@@ -112,7 +112,7 @@
                         <tbody>
                         <!-- <tr>
                             <td>学校：</td>
-                            <td id="school_name">哈尔滨华德幼儿园</td>
+                            <td id="school_name">汤圆幼儿园</td>
                         </tr> -->
                       
                        <tr>

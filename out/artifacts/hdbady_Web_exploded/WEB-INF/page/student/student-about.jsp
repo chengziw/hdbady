@@ -55,7 +55,7 @@
                     <td bgcolor="#EBEBEB" align="right">学号：</td>
                     <td bgcolor="#FFFFFF"><s:property value="student.student_no"/></td>
                     <td bgcolor="#EBEBEB" align="right">学校：</td>
-                    <td bgcolor="#FFFFFF">华德幼儿园</td>
+                    <td bgcolor="#FFFFFF">汤圆幼儿园</td>
                     <td bgcolor="#EBEBEB" align="right">年级：</td>
                     <td bgcolor="#FFFFFF"><s:property value="student.grade.name"/></td>
                     <td bgcolor="#EBEBEB" align="right">班级：</td>

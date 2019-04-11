@@ -123,7 +123,7 @@ $(function () {
 
                     var li = $("<li>" +
                         "<div class='shenhe'>"+
-                        "<div class='blue'>华德幼儿园</div>"+
+                        "<div class='blue'>汤圆幼儿园</div>"+
                         "<div>"+this.statusLabel+"</div>"+
                         "</div>"+
                         "<div class='kuai'>"+

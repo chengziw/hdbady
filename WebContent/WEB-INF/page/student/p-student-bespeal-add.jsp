@@ -57,7 +57,7 @@
 
 
 						<div class="nianji">
-							<div ><span>所报学校 ：</span><h4 class="xiaoming">&nbsp;华德幼儿园</h4></div>
+							<div ><span>所报学校 ：</span><h4 class="xiaoming">&nbsp;汤圆幼儿园</h4></div>
 							<span>所报年级 ： </span>
 							<select class="form-control select">
 								<option>托班</option>

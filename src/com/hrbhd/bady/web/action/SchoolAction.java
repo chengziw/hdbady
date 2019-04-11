@@ -1,39 +1,21 @@
 package com.hrbhd.bady.web.action;
 
-import java.io.File;
-
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.net.URL;
-import java.util.List;
-import java.util.Random;
-
-import javax.servlet.ServletInputStream;
-import javax.servlet.ServletRequest;
-
-import org.apache.commons.collections.buffer.BlockingBuffer;
+import com.hrbhd.bady.domain.School;
+import com.hrbhd.bady.exception.DeletePictureException;
+import com.hrbhd.bady.service.ISchoolService;
+import com.hrbhd.bady.util.JsonUtil;
+import com.hrbhd.bady.web.action.base.BaseAction;
+import net.sf.json.JSONArray;
+import net.sf.json.JsonConfig;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.ServletActionContext;
-import org.aspectj.weaver.patterns.PerThisOrTargetPointcutVisitor;
-import org.aspectj.weaver.reflect.ReflectionBasedReferenceTypeDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import com.hrbhd.bady.domain.Classes;
-import com.hrbhd.bady.domain.Grade;
-import com.hrbhd.bady.domain.School;
-import com.hrbhd.bady.exception.DeletePictureException;
-import com.hrbhd.bady.service.ISchoolService;
-import com.hrbhd.bady.test.Test5;
-import com.hrbhd.bady.util.JsonUtil;
-import com.hrbhd.bady.util.MD5Utils;
-import com.hrbhd.bady.web.action.base.BaseAction;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JsonConfig;
-import net.sf.json.util.PropertyFilter;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 @Controller
 @Scope("prototype")
@@ -101,12 +83,12 @@ public class SchoolAction extends BaseAction<School> {
 	public String addSchool() {
 
 		schoolService.save(model);
-
 		return NONE;
 	}
 
 	public String editSchool() throws IOException {
 
+	    System.out.println(model.toString());
 		schoolService.editSchool(model);
 
 		return NONE;

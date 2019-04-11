@@ -294,7 +294,7 @@
 
 
 				</div>
-</form>			
+</form>
 
             <div class="tab_box" style="display: none">
                 <table cellspacing="0" cellpadding="6" border="0">
@@ -509,8 +509,12 @@
             <div id="show-error-message-box" style="color: red"></div>
         </div></div>
 
-        <div class="panel layout-panel layout-panel-center" style="width: 608px; left: 0px; top: 627px;"><div region="center" border="false" style="overflow: hidden; background-color: rgb(224, 236, 255); width: 608px; height: 71px;" title="" class="panel-body panel-body-noheader panel-body-noborder layout-body">
-            <div id="dlg-buttons" style="background-color:#E0ECFF; padding-top:32px; padding-bottom:0px; float:right;">
+
+
+
+
+        <div class="panel layout-panel layout-panel-center" style="width: 608px; left: 0px; top: 627px;"><div region="center" border="false" style="overflow: hidden; background-color: rgb(224, 236, 255); overflow: auto; padding: 6px; width: 590px; height: 560px;" title="" class="panel-body panel-body-noheader panel-body-noborder layout-body">
+            <div id="dlg-buttons" style="background-color:#E0ECFF; margin-top: 5px; padding-bottom:18px; float:right;">
                 <a href="#" class="easyui-linkbutton l-btn l-btn-small" id="save-btn" iconcls="icon-save" onclick="saveSchool()" group="">保存</a>
                 <a href="#" class="easyui-linkbutton panel-tool-close l-btn l-btn-small" iconcls="icon-no" onclick="javascript:parent.$('#openWindow').window('close');" group="" id="">取消</a>
             </div>

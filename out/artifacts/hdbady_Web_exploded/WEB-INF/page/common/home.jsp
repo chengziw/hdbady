@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>华德幼儿园</title>
+<title>汤圆幼儿园</title>
 
 <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="js/easyui-1.4.4/themes/default/easyui.css" id="swicth-style2">
@@ -1207,7 +1207,7 @@ function editUserOpenWindow(url,title,width,height){
 <div class="easyui-layout" fit="true" style="padding:0px; margin:0px; margin-left:8px;">
     <div region="north" border="false" class="cs-north">
         <div class="cs-north-bg">
-        <div class="cs-north-logo"><img src="images/main_title_logo.png" align="absmiddle"><span  style="color:#FFFFFF; padding-left:8px;">华德幼儿园</span><span style="margin-left:28px; font-size:14px;color:#E7F0FE;">
+        <div class="cs-north-logo"><img src="images/main_title_logo.png" align="absmiddle"><span  style="color:#FFFFFF; padding-left:8px;">汤圆幼儿园</span><span style="margin-left:28px; font-size:14px;color:#E7F0FE;">
                 <span id="welcomeword"></span>,${session.loginUser.teacher_name}         
             </span></div>
             

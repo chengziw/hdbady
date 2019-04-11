@@ -5,7 +5,7 @@
 <html lang="en-US">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>华德幼儿园</title>
+    <title>汤圆幼儿园</title>
     <link rel="stylesheet" type="text/css" href="js/easyui-1.4.4/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="js/easyui-1.4.4/themes/icon.css">
 

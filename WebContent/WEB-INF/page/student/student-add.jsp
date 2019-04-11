@@ -43,7 +43,7 @@
 			
                 <tbody><tr>
                     <td align="right">学校：</td>
-                    <td>华德幼儿园<!-- <input id="school_id" required="true" value="" data-options="validType:'noNull'" class="combobox-f combo-f textbox-f" style="display: none;" textboxname="school_id" comboname="school_id"> --></td>
+                    <td>汤圆幼儿园<!-- <input id="school_id" required="true" value="" data-options="validType:'noNull'" class="combobox-f combo-f textbox-f" style="display: none;" textboxname="school_id" comboname="school_id"> --></td>
                     <td colspan="6" align="left">
                         <span id="schoolLastText"><font color="blue">该校当前学年：2016学年（2016年9月 - 2017年7月18号）</font>&nbsp;&nbsp;<span style="color:#555555; font-weight:bold;">.</span>&nbsp;&nbsp;</span>
                     </td>

@@ -1,19 +1,11 @@
 package com.hrbhd.bady.util;
 
-import java.util.ArrayList;
-
-import java.util.List;
-
-import org.hibernate.criterion.DetachedCriteria;
-
 import com.hrbhd.bady.domain.Structure;
-
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import java.util.*;
-
 import net.sf.json.JSONArray;
 import net.sf.json.JsonConfig;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TreeBuilder {
 
@@ -193,7 +185,7 @@ public class TreeBuilder {
 
 		List<Structure> structures = new ArrayList<Structure>();
 
-		Structure s1 = new Structure("1", "华德幼儿园", "0", "");
+		Structure s1 = new Structure("1", "汤圆幼儿园", "0", "");
 		Structure s2 = new Structure("11", "保安队", "1", ",1,2,");
 		Structure s3 = new Structure("111", "保安队长", "11", ",1,2,");
 		Structure s4 = new Structure("12", "教务处", "1", ",1,2,");

@@ -1,10 +1,11 @@
 package com.hrbhd.bady.service.impl;
 
-import java.io.UnsupportedEncodingException;
-import java.sql.Date;
-
-import javax.jws.WebParam.Mode;
-
+import com.hrbhd.bady.dao.ITeacherChangeLogDao;
+import com.hrbhd.bady.domain.Teacher;
+import com.hrbhd.bady.domain.TeacherChangeLog;
+import com.hrbhd.bady.service.ITeacherChangeLogService;
+import com.hrbhd.bady.util.PageBean;
+import com.hrbhd.bady.util.TimeUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.ServletActionContext;
 import org.hibernate.criterion.DetachedCriteria;
@@ -12,15 +13,9 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.ui.Model;
 
-import com.hrbhd.bady.dao.ITeacherChangeLogDao;
-import com.hrbhd.bady.domain.StudentChangeLog;
-import com.hrbhd.bady.domain.Teacher;
-import com.hrbhd.bady.domain.TeacherChangeLog;
-import com.hrbhd.bady.service.ITeacherChangeLogService;
-import com.hrbhd.bady.util.PageBean;
-import com.hrbhd.bady.util.TimeUtil;
+import java.io.UnsupportedEncodingException;
+import java.sql.Date;
 
 @Service
 @Transactional
@@ -85,7 +80,7 @@ public class TeacherChangeLogServiceImpl implements ITeacherChangeLogService{
 		*/
 		
 		if (StringUtils.isNotBlank(structure_name)) {
-			if (!"华德幼儿园".equals(structure_name)&&!"全部部门".equals(structure_name)) {
+			if (!"汤圆幼儿园".equals(structure_name)&&!"全部部门".equals(structure_name)) {
 				detachedCriteria.add(Restrictions.eq("structure_name", structure_name));
 			}
 

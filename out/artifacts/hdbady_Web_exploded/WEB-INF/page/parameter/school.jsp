@@ -6,7 +6,7 @@
 <html lang="en-US">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>华德幼儿园</title>
+    <title>汤圆幼儿园</title>
     <link rel="stylesheet" type="text/css" href="js/easyui-1.4.4/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="js/easyui-1.4.4/themes/icon.css">
 
@@ -39,7 +39,7 @@
                                                     <%-- <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="false" onclick="addSchool();">新建学校</a>
 
 
-                &nbsp;&nbsp;&nbsp;&nbsp;<span id="schoolText">最多可以创建一所学校,别问为什么,就一个华德幼儿园.</span> --%>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="schoolText">最多可以创建一所学校,别问为什么,就一个汤圆幼儿园.</span> --%>
                             <!-- </div> -->
             <!--工具栏结束-->
 
@@ -144,7 +144,7 @@
         var id = row.id;
         var url = '${pageContext.request.contextPath}/schoolAction_edit.action?id='+id+'';
         if (row){
-            openTopWindow(url, '编辑学校信息', 620, 698, 'closeEdit');
+            openTopWindow(url, '编辑学校信息', 620, 720, 'closeEdit');
         }
     }
     /* 标注学校 */
