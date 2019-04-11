@@ -294,8 +294,6 @@
 
 
 				</div>
-</form>
-
             <div class="tab_box" style="display: none">
                 <table cellspacing="0" cellpadding="6" border="0">
                     <tbody><tr>
@@ -303,7 +301,7 @@
                         <td style="position: relative;" align="right">
                             <form id="img01_form" name="submit" enctype="multipart/form-data" data-href="${pageContext.request.contextPath}/schoolAction_importPicture.action" method="post">
                             <input value="上传" multiple="multiple" id="img01" name="img_file" type="file">
-                            <a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add" group="" id="">上传</a>
+                            <a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add" group="">上传</a>
                                 <input name="type" value="1" type="hidden">
                             </form>
                             
@@ -369,7 +367,7 @@
                         <td style="position: relative;" align="right">
                             <form id="img02_form" name="submit" enctype="multipart/form-data" data-href="${pageContext.request.contextPath}/schoolAction_importPicture.action" method="post">
                             <input value="上传" multiple="multiple" id="img02" name="img_file" type="file">
-                            <a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add" group="" id="">上传</a>
+                            <a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add" group="">上传</a>
                                 <input name="type" value="2" type="hidden">
                             </form>
                         </td>
@@ -435,7 +433,7 @@
                         <td style="position: relative;" align="right">
                             <form id="img03_form" name="submit" enctype="multipart/form-data" data-href="${pageContext.request.contextPath}/schoolAction_importPicture.action" method="post">
                             <input value="上传" multiple="multiple" id="img03" name="img_file" type="file">
-                            <a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add" group="" id="">上传</a>
+                            <a href="#" class="easyui-linkbutton l-btn l-btn-small" iconcls="icon-add" group="">上传</a>
                                 <input name="type" value="3" type="hidden">
                             </form>
                         </td>
@@ -700,26 +698,29 @@ $.extend($.fn.validatebox.defaults.rules,{
 
     /* 保存学校信息 */
     function saveSchool(){
+        alert("01231");
         $('#show-error-message-box').html('');
-        if (ckeckDateErrorMessageBox() == false) {
+       /* if (ckeckDateErrorMessageBox() == false) {
             return false;
-        }
+        }*/
 
         if ($('#save-btn').hasClass('mylinkbtn-load')) {
             return false;
         }
-        
         $('#save-btn').addClass('mylinkbtn-load');
+
+
 
         $('#fm').form('submit',{
             url: url,
             onSubmit: function(params){
                 var flag = $(this).form('enableValidation').form('validate');
-                if (flag == false) {
+
+             /*   if (flag == false) {
                     $('#save-btn').removeClass('mylinkbtn-load');
                     return false;
                 }
-                /* 校验联系人1 */
+                /!* 校验联系人1 *!/
                 if (validationCanactMan1(1) == false) {
                     lastTipTitle = '请输入联系人';
                     setTooltop($('#cantact_man1 + .textbox .textbox-text'));
@@ -732,7 +733,7 @@ $.extend($.fn.validatebox.defaults.rules,{
                     $('#cantact_man1 + .textbox .textbox-text').removeClass('validatebox-invalid').closest('span').removeClass('textbox-invalid');
                 }
 
-                /* 校验联系人手机号码1 */
+                /!* 校验联系人手机号码1 *!/
                 if (validationCanactPhone1(1) == false) {
                     lastTipTitle = '请输入正确的手机号码';
                     setTooltop($('#cantact_phone1 + .textbox .textbox-text'));
@@ -744,8 +745,8 @@ $.extend($.fn.validatebox.defaults.rules,{
                     $('#cantact_phone1 + .textbox .textbox-text').tooltip('hide');
                     $('#cantact_phone1 + .textbox .textbox-text').removeClass('validatebox-invalid').closest('span').removeClass('textbox-invalid');
                 }
-
-                /* 校验联系人2 */
+                alert("6666");
+                /!* 校验联系人2 *!/
                 if (validationCanactMan1(2) == false) {
                     lastTipTitle = '请输入联系人';
                     setTooltop($('#cantact_man2 + .textbox .textbox-text'));
@@ -758,7 +759,7 @@ $.extend($.fn.validatebox.defaults.rules,{
                     $('#cantact_man2 + .textbox .textbox-text').removeClass('validatebox-invalid').closest('span').removeClass('textbox-invalid');
                 }
 
-                /* 校验联系人手机号码2 */
+                /!* 校验联系人手机号码2 *!/
                 if (validationCanactPhone1(2) == false) {
                     lastTipTitle = '请输入正确的手机号码或者电话号码';
                     setTooltop($('#cantact_phone2 + .textbox .textbox-text'));
@@ -782,8 +783,8 @@ $.extend($.fn.validatebox.defaults.rules,{
                 } else {
                     $('#name + .textbox .textbox-text').tooltip('hide');
                     $('#name + .textbox .textbox-text').removeClass('validatebox-invalid').closest('span').removeClass('textbox-invalid');
-                }
-
+                }*/
+                alert("3333");
                 /* if(filterSpecialChar($("#name").textbox("getValue"))){
                     lastTipTitle = '学校名称包含特殊字符';
                     setTooltop($('#name + .textbox .textbox-text'));
@@ -801,6 +802,7 @@ $.extend($.fn.validatebox.defaults.rules,{
             success: function(result){
                 $('#save-btn').removeClass('mylinkbtn-load');
                 var result = eval('('+result+')');
+                alert("bbb"+result);
                 if (result.errMeg){
                     $('#show-error-message-box').html(result.errMeg);
                 } else {
