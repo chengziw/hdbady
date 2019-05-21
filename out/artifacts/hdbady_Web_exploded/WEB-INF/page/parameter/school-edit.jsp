@@ -698,7 +698,6 @@ $.extend($.fn.validatebox.defaults.rules,{
 
     /* 保存学校信息 */
     function saveSchool(){
-        alert("01231");
         $('#show-error-message-box').html('');
        /* if (ckeckDateErrorMessageBox() == false) {
             return false;
@@ -784,7 +783,6 @@ $.extend($.fn.validatebox.defaults.rules,{
                     $('#name + .textbox .textbox-text').tooltip('hide');
                     $('#name + .textbox .textbox-text').removeClass('validatebox-invalid').closest('span').removeClass('textbox-invalid');
                 }*/
-                alert("3333");
                 /* if(filterSpecialChar($("#name").textbox("getValue"))){
                     lastTipTitle = '学校名称包含特殊字符';
                     setTooltop($('#name + .textbox .textbox-text'));
@@ -802,7 +800,6 @@ $.extend($.fn.validatebox.defaults.rules,{
             success: function(result){
                 $('#save-btn').removeClass('mylinkbtn-load');
                 var result = eval('('+result+')');
-                alert("bbb"+result);
                 if (result.errMeg){
                     $('#show-error-message-box').html(result.errMeg);
                 } else {
